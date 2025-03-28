@@ -6,10 +6,10 @@ Route::get('/', function () {
     return view('Home');
 });
 Route::get('/OurTeam', function () {
-    return 'Our Team';
+    return view('OurTeam');
 
 });Route::get('/LoggingPage', function () {
-    return 'Loggin Page';
+    return view('LoggingPage');
 });
 
 Route::get('/SignInPage', function () {
