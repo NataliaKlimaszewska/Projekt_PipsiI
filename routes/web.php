@@ -25,3 +25,7 @@ Route::get('/Quiz', function () {
     return 'Quiz Page';
 });
 
+Route::get('/DatabaseConnection', function () {
+    return view('DatabaseConnection');
+});
+
