@@ -52,8 +52,8 @@ return view('register');
 
     }
 
-    public function createrRecipe() {
+    public function createRecipe() {
         $hello = rand(1, 100);
-        return view('createrRecipe')->with("hello", $hello);
+        return view('createRecipe')->with("hello", $hello);
     }
 }
