@@ -3,25 +3,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response; // Import the correct Response class
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Hash;
-use App\Models\User;
-use Illuminate\Routing\Controller as BaseController; // Import the BaseController
 
-class Controller extends BaseController
+class Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function home()
-    {
-        $hello = "Strona główna";
-        return view('home')->with("hello", $hello);
+    public function home(){
+        $ingredientsController = new Ingredients();
+        return view('home', ['ingredientsGroups'=> $ingredientsController -> getGroups()]);
     }
+
+    public function store(Request $request)
+    {
+        $ingredients = $request->input('ingredients',[]);
+        return back()->with('success', 'Ingredients added');
+    }
+
 
     public function about()
     {
@@ -34,15 +30,14 @@ class Controller extends BaseController
     }
     public function logOut() {
        auth()->logout();
-
-        return redirect('/');
+       return redirect('/');
     }
     public function register() {
 return view('register');
     }
 
     public function ideas() {
-        return view('ideas')->with("hello",);
+        return view('ideas')->with("hello");
     }
 
     public function quiz()
@@ -55,5 +50,19 @@ return view('register');
     public function createrRecipe() {
         $hello = rand(1, 100);
         return view('createrRecipe')->with("hello", $hello);
+    }
+}
+namespace App\Http\Controllers;
+class Ingredients{
+    private $groups = [
+        "Diary" => ["Milk","Butter", "Yoghurt","Cream Cheese"],
+        "Fruits"=> ["Apple","Plum","Banana","Lemon"],
+        "Vegetables"=>["Zucchini","Carrot"],
+        "Powdery Products"=>["Flour","Rice Flour","Almond Flour"],
+        "Sweeteners"=>["Sugar", "Erythritol","Xylitol","Stevia"],
+        "Other"=>["Eggs", "Oil","Coconut oil"],
+];
+    public function getGroups(){
+        return $this->groups;
     }
 }

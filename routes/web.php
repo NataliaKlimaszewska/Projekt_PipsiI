@@ -1,27 +1,14 @@
 <?php
+use App\Http\Controllers\Controller;
 
-use Illuminate\Support\Facades\Route;
+Route::get('/', [Controller::class, 'home']);
+Route::post('/store', [Controller::class, 'store']);
+Route::get('/about', [Controller::class, 'about']);
+Route::get('/login', [Controller::class, 'logIn']);
+Route::post('/logout', [Controller::class, 'logOut']);
+Route::get('/register', [Controller::class, 'register']);
+Route::get('/ideas', [Controller::class, 'ideas']);
+Route::get('/quiz', [Controller::class, 'quiz']);
+Route::get('/create-recipe', [Controller::class, 'createrRecipe']);
 
-Route::get('/', function () {
-    return view('Home');
-});
-Route::get('/OurTeam', function () {
-    return view('OurTeam');
-
-});Route::get('/LoggingPage', function () {
-    return view('LoggingPage');
-});
-
-Route::get('/SignInPage', function () {
-    return 'Sign In Page';
-});
-Route::get('/CreateRecipe', function () {
-    return 'Create Your Own Recipe Page';
-});
-Route::get('/Ideas', function () {
-    return 'Ideas Page';
-});
-Route::get('/Quiz', function () {
-    return 'Quiz Page';
-});
-
+?>
