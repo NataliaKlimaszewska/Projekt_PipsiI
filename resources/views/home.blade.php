@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@extends("ingredients")
+@extends("Components.ingredients")
 
 @section("content")
     :)))
