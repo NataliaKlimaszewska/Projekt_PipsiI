@@ -4,6 +4,8 @@ networks:
 volumes:
     cake-generator-postgres-data:
         name: cake-generator-postgres-data
+    cake-generator-recipes-data:
+        name: cake-generator-recipes-data
     cake-generator-redis-data:
         name: cake-generator-redis-data
 
@@ -54,6 +56,22 @@ services:
             - cake-generator-dev
         restart: unless-stopped
 
+    recipes-db:
+        image: postgres:17-alpine
+        container_name: cake-generator-recipes-db
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=recipes_db
+        ports:
+            - "63855:5432"
+        volumes:
+            - cake-generator-recipes-data:/var/lib/postgresql/data
+        networks:
+            - cake-generator-dev
+        restart: unless-stopped
+
+
     mailpit:
         image: axllent/mailpit:v1.24.0
         container_name: cake-generator-mailpit-dev
@@ -66,7 +84,7 @@ services:
 
     redis:
         image: redis:7.4-alpine
-        container_name: cake-generator-redis-dev
+        container_name: test-redis-dev
         ports:
             - ${DOCKER_REDIS_HOST_PORT:-63852}:6379
         volumes:

@@ -87,7 +87,7 @@ return [
             'url' => env('DB_URL', ),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'recipes_db'),
+            'database' => env('DB_DATABASE', 'laravel'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
             'charset' => env('DB_CHARSET', 'utf8'),
@@ -96,6 +96,20 @@ return [
             'search_path' => 'public',
             'sslmode' => 'prefer',
         ],
+
+        'recipes' => [
+            'driver' => 'pgsql',
+            'host' => env('RECIPES_DB_HOST', '127.0.0.1'),
+            'port' => env('RECIPES_DB_PORT', '5432'),
+            'database' => env('RECIPES_DB_DATABASE', 'recipes_db'),
+            'username' => env('RECIPES_DB_USERNAME', 'postgres'),
+            'password' => env('RECIPES_DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
