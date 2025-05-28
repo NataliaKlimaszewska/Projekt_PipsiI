@@ -59,5 +59,4 @@
             </p>
         </div>
     </footer>
->>>>>>> 7bce3d3e (Initial project upload)
 @endsection

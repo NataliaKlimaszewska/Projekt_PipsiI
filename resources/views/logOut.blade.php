@@ -1,6 +1,4 @@
 @extends("layouts.master")
-<<<<<<< HEAD
-=======
 <!-- component -->
 <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
     <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
@@ -95,4 +93,3 @@
         </p>
     </div>
 </footer>
->>>>>>> 7bce3d3e (Initial project upload)

@@ -1,11 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7bce3d3e (Initial project upload)
     <style>
         body,
         html { height: 100%; }
@@ -199,8 +195,7 @@
             <p>By signing up, I agree to to the Terms of Service and Privacy Policy</p>
             <div id="loginMessage"></div> </form>
     </div>
-<<<<<<< HEAD
-=======
+
     <!-- component -->
     <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
         <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
@@ -295,5 +290,4 @@
             </p>
         </div>
     </footer>
->>>>>>> 7bce3d3e (Initial project upload)
 @endsection

@@ -1,10 +1,6 @@
 @extends("layouts.master")
 
 @section("content")
-<<<<<<< HEAD
-=======
-
-
 <!-- component -->
 <div class="max-w-[280px] mx-auto">
     <div class="flex flex-col items-center mt-[10vh]">
@@ -123,5 +119,4 @@
         </p>
     </div>
 </footer>
->>>>>>> 7bce3d3e (Initial project upload)
 @endsection
