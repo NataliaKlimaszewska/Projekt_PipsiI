@@ -1,3 +1,6 @@
+@extends("layouts.master")
+
+@section("content")
 <<<<<<< HEAD
 =======
 
@@ -121,4 +124,4 @@
     </div>
 </footer>
 >>>>>>> 7bce3d3e (Initial project upload)
-@extends("layouts.master")
+@endsection
