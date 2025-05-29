@@ -5,6 +5,9 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 
 class SetLocaleMiddleware
 {
@@ -16,7 +19,7 @@ class SetLocaleMiddleware
     public function handle(Request $request, Closure $next)
     {
         // Supported languages
-        $supportedLocales = ['en', 'pl', 'es', 'ru', 'fr'];
+        $supportedLocales = ['en', 'pl', 'es', 'ru', 'fr', 'de'];
 
         // Check if locale is in the session
         if (Session::has('locale')) {

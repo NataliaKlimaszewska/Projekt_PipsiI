@@ -13,7 +13,7 @@ Route::post('/ingredients/save', [\App\Http\Controllers\Controller::class, 'save
 
 Route::get('/language/{locale}', function ($locale) {
     // Validate the locale
-    $supportedLocales = ['en', 'pl', 'es', 'ru', 'fr'];
+    $supportedLocales = ['en', 'pl', 'es', 'ru', 'fr', 'de'];
 
     if (in_array($locale, $supportedLocales)) {
         // Store the locale in the session

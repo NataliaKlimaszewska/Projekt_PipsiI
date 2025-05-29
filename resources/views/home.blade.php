@@ -2,7 +2,7 @@
 
 @section("content")
     <h1>Strona główna</h1>
-
+    Aktualny język: {{ App::getLocale() }}
 
     <p>Witamy na stronie głównej! Oto lista składników:</p>
 

@@ -23,7 +23,7 @@
                         </button>
                     </div>
                     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/">Home</a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/">{{ __('messages.navigation.home') }}</a>
                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/createRecipe">Create Your Own Recipe</a>
                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/ideas">Ideas</a>
                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/logIn">Log In</a>
@@ -38,13 +38,13 @@
                                 <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div class="bg-transparent p-2 rounded-lg">
-                                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
+                                            <a href="{{ route('language.switch', 'en') }}" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
                                                 <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="h-5 w-5 rounded-sm">
                                                 <span class="font-semibold text-black-900 dark:text-black-200">ENG</span>
                                             </a>
                                         </div>
                                         <div class="bg-transparent p-2 rounded-lg">
-                                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
+                                            <a href="{{ route('language.switch', 'pl') }}" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
                                                 <img src="https://flagcdn.com/w40/pl.png" alt="pl" class="h-5 w-5 rounded-sm">
                                                 <span class="font-semibold text-black-900 dark:text-black-200">PL</span>
                                             </a>
@@ -52,7 +52,7 @@
                                         </a>
 
                                         <div class="bg-transparent p-2 rounded-lg">
-                                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
+                                            <a href="{{ route('language.switch', 'de') }}" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
                                                 <img src="https://flagcdn.com/w40/de.png" alt=DE" class="h-5 w-5 rounded-sm">
                                                 <span class="font-semibold text-black-900 dark:text-black-200">DE</span>
                                             </a>
@@ -60,20 +60,20 @@
                                         </a>
 
                                         <div class="bg-transparent p-2 rounded-lg">
-                                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
+                                            <a href="{{ route('language.switch', 'es') }}" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
                                                 <img src="https://flagcdn.com/w40/es.png" alt="ES" class="h-5 w-5 rounded-sm">
                                                 <span class="font-semibold text-black-900 dark:text-black-200">ES</span>
                                             </a>
                                         </div>
                                         </a>
                                         <div class="bg-transparent p-2 rounded-lg">
-                                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
+                                            <a href="{{ route('language.switch', 'ru') }}" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
                                                 <img src="https://flagcdn.com/w40/ru.png" alt="RU" class="h-5 w-5 rounded-sm">
                                                 <span class="font-semibold text-black-900 dark:text-black-200">RU</span>
                                             </a>
                                         </div>
                                         <div class="bg-transparent p-2 rounded-lg">
-                                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
+                                            <a href="{{ route('language.switch', 'fr') }}" class="flex items-center space-x-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2">
                                                 <img src="https://flagcdn.com/w40/fr.png" alt="FR" class="h-5 w-5 rounded-sm">
                                                 <span class="font-semibold text-black-900 dark:text-black-200">FR</span>
                                             </a>
