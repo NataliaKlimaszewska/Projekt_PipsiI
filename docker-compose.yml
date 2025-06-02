@@ -57,20 +57,19 @@ services:
         restart: unless-stopped
 
     recipes-db:
-        image: postgres:17-alpine
-        container_name: cake-generator-recipes-db
+        image: mysql:8
+        container_name: cake-generator-recipes-data
         environment:
-            - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=postgres
-            - POSTGRES_DB=recipes_db
+            MYSQL_DATABASE: recipes_db
+            MYSQL_USER: recipes_user
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: root
         ports:
-            - "63855:5432"
+            - "63855:3306"
         volumes:
-            - cake-generator-recipes-data:/var/lib/postgresql/data
+            - cake-generator-recipes-data:/var/lib/mysql
         networks:
             - cake-generator-dev
-        restart: unless-stopped
-
 
     mailpit:
         image: axllent/mailpit:v1.24.0
