@@ -9,7 +9,7 @@
     <x-ingredients :ingredientsGroups="$ingredientsGroups" :defaultDisplay="true" />
     <!-- component -->
 
-    <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
+    <footer class="bg-gradient-to-r from-[#ffe4ec] via-[#f8f0ff] to-[#d9f4ff]">
         <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <div>
@@ -27,8 +27,8 @@
                         <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                             <a class="hover:opacity-75" href> About </a>
                             <a class="hover:opacity-75" href> Meet the Team </a>
+                            <a class="hover:opacity-75" href> Log In </a>
                             <a class="hover:opacity-75" href> Sign In </a>
-                            <a class="hover:opacity-75" href> Careers </a>
                         </nav>
                     </div>
 
