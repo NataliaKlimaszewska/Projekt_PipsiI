@@ -100,7 +100,7 @@ return [
         'recipes' => [
             'driver' => 'pgsql',
             'host' => env('RECIPES_DB_HOST', '127.0.0.1'),
-            'port' => env('RECIPES_DB_PORT', '5432'),
+            'port' => env('RECIPES_DB_PORT', '3306'),
             'database' => env('RECIPES_DB_DATABASE', 'recipes_db'),
             'username' => env('RECIPES_DB_USERNAME', 'postgres'),
             'password' => env('RECIPES_DB_PASSWORD', ''),
