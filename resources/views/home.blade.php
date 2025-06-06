@@ -8,6 +8,11 @@
 
     <x-ingredients :ingredientsGroups="$ingredientsGroups" :defaultDisplay="true" />
     <!-- component -->
+    <ul>
+        @foreach($products as $product)
+            <li>{{ $product->nazwa }}</li>
+        @endforeach
+    </ul>
 
     <footer class="bg-gradient-to-r from-[#ffe4ec] via-[#f8f0ff] to-[#d9f4ff]">
         <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">

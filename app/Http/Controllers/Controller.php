@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ingrerdients;
 use Illuminate\Http\Request;
 
 class Controller
 {
     public function home(){
         $ingredientsController = new Ingredients();
-        return view('home', ['ingredientsGroups' => $ingredientsController->getGroups()]);
+        $products = Ingrerdients::all();
+        return view('home', compact('products'), ['ingredientsGroups' => $ingredientsController->getGroups()]);
     }
 
     public function store(Request $request)

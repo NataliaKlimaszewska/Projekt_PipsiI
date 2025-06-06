@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev
 
 # Zainstaluj rozszerzenia PHP
-RUN docker-php-ext-install pdo mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-install pdo mbstring exif pcntl bcmath gd zip pdo_mysql
 
 # Zainstaluj rozszerzenie PostgreSQL
 RUN apt-get install -y libpq-dev \

@@ -98,7 +98,7 @@ return [
         ],
 
         'recipes' => [
-            'driver' => 'pgsql',
+            'driver' => 'mysql',
             'host' => env('RECIPES_DB_HOST', '127.0.0.1'),
             'port' => env('RECIPES_DB_PORT', '3306'),
             'database' => env('RECIPES_DB_DATABASE', 'recipes_db'),
