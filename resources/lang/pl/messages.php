@@ -6,6 +6,12 @@ return [
         'home' => 'Strona Główna',
         'about' => 'O nas',
         'recipes' => 'Przepisy',
+        'change language' => 'Zmień Język',
+        'meet_our_team' => 'Poznaj Nasz Zespół',
+        'create_recipe' => 'Stwórz Swój Własny Przepis',
+        'ideas' => 'Pomysły',
+        'login' => 'Zaloguj się',
+        'signup' => 'Zarejestruj się',
     ],
     'buttons' => [
         'create' => 'Stwórz',
