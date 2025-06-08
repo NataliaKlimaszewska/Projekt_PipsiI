@@ -10,14 +10,16 @@
             <span class="text-gray-700 font-medium">Continue with Google</span>
         </button>
         <span class="mb-2 text-gray-900">Or</span>
-        <form>
-            <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Email" value=""/>
-            <input type="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Password" value=""/>
-            <input type="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Confirm password" value=""/>
-            <button class="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]">Log In</button>
+        <form action="{{ route('register') }}" method="POST">
+            @csrf
+            <input type="text" name="name" placeholder="Name" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" />
+            <input type="text" name="email" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Email" value=""/>
+            <input type="password" name="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Password" value=""/>
+            <input type="password" name="password_confirmation" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Confirm password" value=""/>
+            <button type="submit" class="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]">Log In</button>
         </form>
         <p class="text-center mt-3 text-[14px]">Already have an account?
-            <a href="/signup" class="text-gray-600">Log In</a>
+            <a href="/logIn" class="text-gray-600">Log In</a>
         </p>
         <p class="text-center mt-3 text-[14px]">By clicking continue, you agree to our
             <a href="/terms" class="text-gray-600">Terms of Service</a> and <a href="/privacy" class="text-gray-600">Privacy Policy</a>.
