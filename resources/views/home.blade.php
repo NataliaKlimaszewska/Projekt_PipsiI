@@ -48,4 +48,11 @@
         </button>
     </div>
     <x-weather-widget/>
+
+    @foreach($recipes as $recipe)
+        <h2><strong>{{ $recipe->nazwa }}</strong></h2>
+        <p>{{ $recipe->sposob_wykonania }}</p>
+        <p>{{ $recipe->opis }}</p>
+        <br>
+    @endforeach
 @endsection

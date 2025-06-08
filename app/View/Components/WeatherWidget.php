@@ -15,7 +15,7 @@ class WeatherWidget extends Component
     public $weather;
     public function __construct(WeatherService $weatherService)
     {
-        $this->weather = $weatherService->getSimpleWeather('warszawa', 1);
+        $this->weather = $weatherService->getSimpleWeather('legnica', 1);
     }
 
     /**
