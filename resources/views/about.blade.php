@@ -85,17 +85,17 @@
         <div class="card-container">
             <img class="team-member-image" src="images/NatalkaSzogun.jpg" alt="Natalka">
             <p class="name">Natalia Klimaszewska</p>
-            <p class="position">Creator </p>
+            <p class="position">Project Manager</p>
         </div>
         <div class="card-container">
-            <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors2.svg" alt="Instructor">
-            <p class="name">Jane Doe</p>
-            <p class="position">Instructor</p>
+            <img class="team-member-image" src="images/Marcin.jpg" alt="Natalka">
+            <p class="name">Natalia Klimaszewska</p>
+            <p class="position">Backend</p>
         </div>
         <div class="card-container">
             <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors3.svg" alt="Instructor">
-            <p class="name">John Smith</p>
-            <p class="position">Instructor</p>
+            <p class="name">Kamil Ziemiański</p>
+            <p class="position">Frontend</p>
         </div>
     </div>
 </div>

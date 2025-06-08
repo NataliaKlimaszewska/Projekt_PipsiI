@@ -1,2 +1,1 @@
 <a {{$attributes}}>{{$slot}}</a>
-
