@@ -164,4 +164,17 @@ return [
         'terms_separator' => 'oraz',
         'privacy_link' => 'Politykę Prywatności',
     ],
+    'weather_widget' => [
+        'title' => 'Pogoda',
+        'city' => 'Miasto:',
+        'date' => 'Data:',
+        'temperature' => 'Temperatura:',
+        'feels_like' => 'Odczuwalna:',
+        'wind' => 'Wiatr:',
+        'wind_direction' => 'kierunek:',
+        'pressure' => 'Ciśnienie:',
+        'humidity' => 'Wilgotność:',
+        'precipitation' => 'Opady:',
+        'no_data' => 'Brak danych pogodowych.',
+    ],
     ];

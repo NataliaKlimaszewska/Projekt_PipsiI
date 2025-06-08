@@ -151,4 +151,17 @@ return [
         'terms_separator' => 'und',
         'privacy_link' => 'Datenschutzrichtlinie',
     ],
+    'weather_widget' => [
+        'title' => 'Wetter',
+        'city' => 'Stadt:',
+        'date' => 'Datum:',
+        'temperature' => 'Temperatur:',
+        'feels_like' => 'Gefühlte Temp.:',
+        'wind' => 'Wind:',
+        'wind_direction' => 'Richtung:',
+        'pressure' => 'Luftdruck:',
+        'humidity' => 'Luftfeuchtigkeit:',
+        'precipitation' => 'Niederschlag:',
+        'no_data' => 'Keine Wetterdaten verfügbar.',
+    ],
 ];

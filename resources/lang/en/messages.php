@@ -54,7 +54,19 @@ return [
         'terms_separator' => 'and',
         'privacy_link' => 'Privacy Policy',
     ],
-
+    'weather_widget' => [
+        'title' => 'Weather',
+        'city' => 'City:',
+        'date' => 'Date:',
+        'temperature' => 'Temperature:',
+        'feels_like' => 'Feels like:',
+        'wind' => 'Wind:',
+        'wind_direction' => 'direction:',
+        'pressure' => 'Pressure:',
+        'humidity' => 'Humidity:',
+        'precipitation' => 'Precipitation:',
+        'no_data' => 'No weather data available.',
+    ],
     'buttons' => [
         'create' => 'Create',
         'cancel' => 'Cancel',

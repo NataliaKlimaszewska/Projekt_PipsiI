@@ -63,5 +63,5 @@
         <p>{{ $recipe->opis }}</p>
         <br>
     @endforeach
-
+    <x-weather-widget/>
 @endsection
