@@ -2,8 +2,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CAKE GENERATOR</title>
+    <title>Sweet Factory</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
 <body>
 <header class="bg-white shadow-md" x-data="{ open: false }">
@@ -94,7 +95,6 @@
         </div>
     </div>
 </header>
-<x-weather-widget />
 
 <main class="p-8">
 </main>
@@ -147,5 +147,6 @@
         </div>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>
