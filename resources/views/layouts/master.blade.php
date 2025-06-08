@@ -100,6 +100,8 @@
     </nav>--}}
 </header>
 
+<x-weather-widget />
+
 <main class="p-8">
 </main>
     @yield("content")

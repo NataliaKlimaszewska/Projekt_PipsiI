@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Cache;
@@ -12,8 +13,8 @@ class WeatherService
 
     public function __construct()
     {
-        // Get API key from .env file
-        $this->apiKey = env('fbafe7f47f513633acd7');
+        // Get an API key from .env file
+        $this->apiKey = env('WEATHER_API_KEY');
         $this->client = new Client([
             'base_uri' => 'https://dobrapogoda24.pl/api/v1/weather/'
         ]);
@@ -32,24 +33,29 @@ class WeatherService
                     'query' => [
                         'city' => $city,
                         'day' => $day,
-                        'token' => $this->token
+                        'token' => $this->apiKey
                     ]
                 ]);
 
-                return json_decode($response->getBody(), true);
+                $data = json_decode($response->getBody(), true);
+                return [
+                    'date' => $data['date'] ?? null,
+                    'sunrise' => $data['sunrise'] ?? null,
+                    'sunset' => $data['sunset'] ?? null,
+                    'temp_max' => $data['day']['temp_max'] ?? null,
+                    'temp_min' => $data['day']['temp_min'] ?? null,
+                    'feels_like_max' => $data['day']['temp_felt_max'] ?? null,
+                    'feels_like_min' => $data['day']['temp_felt_min'] ?? null,
+                    'precipitation' => $data['day']['precipitation'] ?? null,
+                    'wind' => $data['day']['wind_velocity'] ?? null,
+                    'wind_direction' => $data['day']['wind_direction'] ?? null,
+                    'humidity' => $data['day']['humidity'] ?? null,
+                    'pressure' => $data['day']['pressure'] ?? null,
+                ];
             } catch (RequestException $e) {
                 \Log::error('Weather API error: ' . $e->getMessage());
                 throw new \Exception('Could not fetch weather data.');
             }
         });
-    }
-}
-
-class WeatherController extends Controller
-{
-    public function show(WeatherService $weatherService)
-    {
-        $weather = $weatherService->getSimpleWeather('warszawa', 1);
-        return view('weather.show', compact('weather'));
     }
 }
