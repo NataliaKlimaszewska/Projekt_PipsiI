@@ -14,10 +14,12 @@
 
             <span class="mb-2 text-gray-900">{{ __('messages.register_form.separator') }}</span>
 
-            <form>
-                <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" placeholder="{{ __('messages.register_form.email_placeholder') }}" value=""/>
-                <input type="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" placeholder="{{ __('messages.register_form.password_placeholder') }}" value=""/>
-                <input type="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" placeholder="{{ __('messages.register_form.confirm_password_placeholder') }}" value=""/>
+            <form action="{{ route('register') }}" method="POST">
+                @csrf
+                <input type="text" name="name" placeholder="Name" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" />
+                <input type="text" name="email" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" placeholder="{{ __('messages.register_form.email_placeholder') }}" value=""/>
+                <input type="password" name="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" placeholder="{{ __('messages.register_form.password_placeholder') }}" value=""/>
+                <input type="password" name="password_confirmation" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium" placeholder="{{ __('messages.register_form.confirm_password_placeholder') }}" value=""/>
 
                 {{-- Poniżej poprawiony przycisk z napisem "Sign Up" zamiast "Log In" --}}
                 <button class="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]">
