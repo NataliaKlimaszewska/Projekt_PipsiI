@@ -35,6 +35,26 @@ return [
         'careers_benefits' => 'Benefits',
         'copyright' => '© :year :name. All rights reserved.',
     ],
+    'homepage' => [
+        'welcome_title' => 'Welcome to the Sweet Factory!',
+        'welcome_subtitle' => 'Discover our collection of favorite, tested recipes for cakes, cookies, and desserts.',
+    ],
+    'register_form' => [
+        'title' => 'Sign Up',
+        'google_button' => 'Continue with Google',
+        'separator' => 'Or',
+        'email_placeholder' => 'Email',
+        'password_placeholder' => 'Password',
+        'confirm_password_placeholder' => 'Confirm password',
+        'submit_button' => 'Sign Up',
+        'has_account_prompt' => 'Already have an account?',
+        'login_link' => 'Log In',
+        'terms_agreement_prefix' => 'By clicking continue, you agree to our',
+        'terms_link' => 'Terms of Service',
+        'terms_separator' => 'and',
+        'privacy_link' => 'Privacy Policy',
+    ],
+
     'buttons' => [
         'create' => 'Create',
         'cancel' => 'Cancel',

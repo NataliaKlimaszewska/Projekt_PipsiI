@@ -17,13 +17,6 @@ return [
         'role_backend' => 'Backend',
         'role_frontend' => 'Frontend',
     ],
-    'about_creators' => [
-        'title' => 'Conoce a los Creadores :)',
-        'subtitle' => '¡Estos son tus "héroes de la repostería"! Crearon este sitio web para que no tengas que preocuparte por tus recetas.',
-        'role_pm' => 'Jefe de Proyecto',
-        'role_backend' => 'Backend',
-        'role_frontend' => 'Frontend',
-    ],
     'footer' => [
         'slogan' => 'Una fábrica de dulces para todos.',
         'services_header' => 'SERVICIOS',
@@ -134,15 +127,23 @@ return [
     "A classic festive cake, consisting of a delicate yeast dough wrapped around a rich, moist poppy seed filling with nuts and dried fruits."=>"Un clásico pastel festivo, que consiste en una delicada masa de levadura envuelta alrededor de un relleno rico y húmedo de semillas de amapola con nueces y frutas secas.",
     "Prepare Yeast Dough:** In a large bowl, combine flour, sugar, and yeast. Add warm milk, melted butter, egg, and salt. Knead the dough for about 10 minutes until smooth and elastic. Cover with a clean cloth and let rise in a warm place for 1-1.5 hours, or until doubled in size.\r\n2.  **Prepare Poppy Seed Filling:** While the dough rises, place ground poppy seeds in a saucepan with milk and honey. Bring to a simmer, stirring constantly, until the milk is absorbed and mixture thickens (about 5-7 minutes). Remove from heat and stir in raisins, walnuts, and orange zest (if using). Let cool completely. Once cool, stir in the lightly beaten egg white.\r\n3.  **Assemble Roll:** On a lightly floured surface, roll out the risen dough into a large rectangle (approx. 30x40 cm). Spread the cooled poppy seed filling evenly over the dough, leaving a small border around the edges.\r\n4.  Starting from one long side, tightly roll up the dough into a log. Pinch the seam to seal it.\r\n5.  **Bake:** Carefully transfer the roll (seam-side down) onto a baking sheet lined with parchment paper. Preheat oven to 170°C (340°F) conventional. Bake for 35-45 minutes, or until golden brown.\r\n6.  **Cooling & Glaze:** Let cool completely. You can finish it with a simple powdered sugar glaze (powdered sugar + a little lemon juice/milk) once cooled."=>"**Prepara la Masa de Levadura:** En un bol grande, combina la harina, el azúcar y la levadura. Añade la leche tibia, la mantequilla derretida, el huevo y la sal. Amasa la masa durante unos 10 minutos hasta que esté suave y elástica. Cubre con un paño limpio y deja leudar en un lugar cálido durante 1-1.5 horas, o hasta que duplique su tamaño.\r\n2.  **Prepara el Relleno de Semillas de Amapola:** Mientras la masa sube, coloca las semillas de amapola molidas en una cacerola con leche y miel. Lleva a ebullición suave, revolviendo constantemente, hasta que la leche sea absorbida y la mezcla espese (aproximadamente 5-7 minutos). Retira del fuego y añade las pasas, las nueces y la ralladura de naranja (si la usas). Deja enfriar completamente. Una vez frío, incorpora la clara de huevo ligeramente batida.\r\n3.  **Monta el Rollo:** Sobre una superficie ligeramente enharinada, extiende la masa leudada hasta formar un rectángulo grande (aprox. 30x40 cm). Extiende el relleno de semillas de amapola enfriado uniformemente sobre la masa, dejando un pequeño borde alrededor de los bordes.\r\n4.  Comenzando por un lado largo, enrolla la masa firmemente hasta formar un tronco. Pellizca la unión para sellarlo.\r\n5.  **Hornea:** Transfiere con cuidado el rollo (con la unión hacia abajo) a una bandeja para hornear forrada con papel de horno. Precalienta el horno a 170°C (convencional). Hornea durante 35-45 minutos, o hasta que esté dorado.\r\n6.  **Enfriamiento y Glaseado:** Deja enfriar completamente. Puedes terminarlo con un glaseado simple de azúcar glas (azúcar glas + un poco de zumo de limón/leche) una vez enfriado."
 ],
-    "homepage"=>[
-        "Baking has never been so easy and inspiring!"=>"¡Hornear nunca ha sido tan fácil e inspirador!",
-        "Discover the world of sweet baked goods with our recipe generator. Whether you're a beginner baker or an experienced master, you'll find inspiration here to delight your palate."=>"Descubre el mundo de la repostería dulce con nuestro generador de recetas. Seas un panadero principiante o un maestro experimentado, aquí encontrarás inspiración para deleitar tu paladar.",
-        "Your Ideal Cake in a Few Clicks"=>"Tu Tarta Ideal en Pocos Clics",
-        "Dreaming of a fluffy sponge cake, a creamy cheesecake, or maybe a crispy apple pie? Tell us what ingredients you have on hand, what your mood is, and we'll generate the perfect recipe for you. No more boring bakes or wasted time searching!"=>"¿Sueñas con un bizcocho esponjoso, una tarta de queso cremosa o quizás una crujiente tarta de manzana? Dinos qué ingredientes tienes a mano, cuál es tu estado de ánimo, y generaremos la receta perfecta para ti. ¡Se acabaron los horneados aburridos y el tiempo perdido buscando!"
+    'homepage' => [
+        'welcome_title' => '¡Bienvenido a la Sweet Factory!',
+        'welcome_subtitle' => 'Descubre nuestra colección de recetas favoritas y probadas para pasteles, galletas y postres.',
     ],
-    "about"=>[
-        "About Us – Passion for Sweets and Innovation"=>"Sobre Nosotros – Pasión por lo Dulce y la Innovación",
-        "Welcome to our sweet world! We are a team of baking enthusiasts who believe everyone deserves the perfect cake. We noticed how much time it can take to find the right recipe, adapt it to available ingredients, or simply discover new inspiration. We decided to change that.\nOur mission is to simplify the baking process and make it even more enjoyable and accessible for everyone. We've created a tool that not only generates recipes but also inspires culinary experiments, helping you use what you have in your kitchen."=>"¡Bienvenidos a nuestro dulce mundo! Somos un equipo de entusiastas de la repostería que creemos que todo el mundo merece el pastel perfecto. Nos dimos cuenta de cuánto tiempo puede llevar encontrar la receta adecuada, adaptarla a los ingredientes disponibles o simplemente descubrir nueva inspiración. Decidimos cambiar eso.\nNuestra misión es simplificar el proceso de horneado y hacerlo aún más agradable y accesible para todos. Hemos creado una herramienta que no solo genera recetas, sino que también inspira experimentos culinarios, ayudándote a usar lo que tienes en tu cocina.",
-        "We believe that the best memories are often made around the table, with a piece of delicious, homemade cake. We want to help you create these magical moments by offering a tool that will make baking your favorite adventure."=>"Creemos que los mejores recuerdos a menudo se crean alrededor de la mesa, con un trozo de delicioso pastel casero. Queremos ayudarte a crear esos momentos mágicos ofreciéndote una herramienta que hará del horneado tu aventura favorita."
-    ]
+    'register_form' => [
+        'title' => 'Registrarse',
+        'google_button' => 'Continuar con Google',
+        'separator' => 'O',
+        'email_placeholder' => 'Correo electrónico',
+        'password_placeholder' => 'Contraseña',
+        'confirm_password_placeholder' => 'Confirmar contraseña',
+        'submit_button' => 'Registrarse',
+        'has_account_prompt' => '¿Ya tienes una cuenta?',
+        'login_link' => 'Iniciar sesión',
+        'terms_agreement_prefix' => 'Al hacer clic en Continuar, aceptas nuestros',
+        'terms_link' => 'Términos de Servicio',
+        'terms_separator' => 'y',
+        'privacy_link' => 'Política de Privacidad',
+    ],
 ];

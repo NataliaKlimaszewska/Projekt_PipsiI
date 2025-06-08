@@ -2,6 +2,14 @@
 
 @section('content')
 
+    <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            {{ __('messages.homepage.welcome_title') }}
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+            {{ __('messages.homepage.welcome_subtitle') }}
+        </p>
+    </div>
     <div id="cake-carousel" class="relative w-full max-w-5xl mx-auto my-8" data-carousel="slide">
         {{-- Carousel wrapper --}}
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -47,12 +55,13 @@
             </span>
         </button>
     </div>
-    <x-weather-widget/>
 
+    {{-- Pętla z przepisami --}}
     @foreach($recipes as $recipe)
         <h2><strong>{{ $recipe->nazwa }}</strong></h2>
         <p>{{ $recipe->sposob_wykonania }}</p>
         <p>{{ $recipe->opis }}</p>
         <br>
     @endforeach
+
 @endsection
