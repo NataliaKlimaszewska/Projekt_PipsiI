@@ -5,11 +5,8 @@ return [
     'navigation' => [
         'home' => 'Inicio',
         'about' => 'Acerca de',
-        'recipes' => 'Recetas',
-        'change language' => 'Cambiar Idioma',
+        'change_language' => 'Cambiar Idioma',
         'meet_our_team' => 'Conozca a Nuestro Equipo',
-        'create_recipe' => 'Crea Pu Propia Receta',
-        'ideas' => 'Ideas',
         'login' => 'Acceso',
         'signup' => 'Registro',
     ],
