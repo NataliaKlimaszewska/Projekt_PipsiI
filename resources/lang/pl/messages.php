@@ -145,15 +145,36 @@ return [
     "A classic festive cake, consisting of a delicate yeast dough wrapped around a rich, moist poppy seed filling with nuts and dried fruits."=>"Klasyczne świąteczne ciasto, składające się z delikatnego ciasta drożdżowego owiniętego bogatym, wilgotnym nadzieniem makowym z orzechami i suszonymi owocami.",
     "Prepare Yeast Dough:** In a large bowl, combine flour, sugar, and yeast. Add warm milk, melted butter, egg, and salt. Knead the dough for about 10 minutes until smooth and elastic. Cover with a clean cloth and let rise in a warm place for 1-1.5 hours, or until doubled in size.\r\n2.  **Prepare Poppy Seed Filling:** While the dough rises, place ground poppy seeds in a saucepan with milk and honey. Bring to a simmer, stirring constantly, until the milk is absorbed and mixture thickens (about 5-7 minutes). Remove from heat and stir in raisins, walnuts, and orange zest (if using). Let cool completely. Once cool, stir in the lightly beaten egg white.\r\n3.  **Assemble Roll:** On a lightly floured surface, roll out the risen dough into a large rectangle (approx. 30x40 cm). Spread the cooled poppy seed filling evenly over the dough, leaving a small border around the edges.\r\n4.  Starting from one long side, tightly roll up the dough into a log. Pinch the seam to seal it.\r\n5.  **Bake:** Carefully transfer the roll (seam-side down) onto a baking sheet lined with parchment paper. Preheat oven to 170°C (340°F) conventional. Bake for 35-45 minutes, or until golden brown.\r\n6.  **Cooling & Glaze:** Let cool completely. You can finish it with a simple powdered sugar glaze (powdered sugar + a little lemon juice/milk) once cooled."=>"**Przygotuj ciasto drożdżowe:** W dużej misce połącz mąkę, cukier i drożdże. Dodaj ciepłe mleko, roztopione masło, jajko i sól. Wyrabiaj ciasto przez około 10 minut, aż będzie gładkie i elastyczne. Przykryj czystą ściereczką i odstaw w ciepłe miejsce na 1-1,5 godziny lub do podwojenia objętości.\r\n2.  **Przygotuj nadzienie makowe:** Gdy ciasto rośnie, umieść zmielony mak w rondelku z mlekiem i miodem. Doprowadź do wrzenia, stale mieszając, aż mleko zostanie wchłonięte, a masa zgęstnieje (około 5-7 minut). Zdejmij z ognia i wmieszaj rodzynki, orzechy włoskie oraz skórkę pomarańczową (jeśli używasz). Pozostaw do całkowitego ostygnięcia. Gdy masa ostygnie, wmieszaj lekko ubite białko jajka.\r\n3.  **Złóż makowiec:** Na lekko posypanej mąką powierzchni rozwałkuj wyrośnięte ciasto na duży prostokąt (ok. 30x40 cm). Rozłóż ostudzone nadzienie makowe równomiernie na cieście, pozostawiając niewielki brzeg wokół krawędzi.\r\n4.  Zaczynając od dłuższego boku, ciasno zwiń ciasto w roladę. Zaciśnij brzeg, aby go zamknąć.\r\n5.  **Piecz:** Ostrożnie przenieś roladę (szwem do dołu) na blachę do pieczenia wyłożoną papierem do pieczenia. Nagrzej piekarnik do 170°C (góra-dół). Piecz przez 35-45 minut lub do uzyskania złotobrązowego koloru.\r\n6.  **Studzenie i lukrowanie:** Pozostaw do całkowitego ostygnięcia. Po ostygnięciu możesz udekorować prostym lukrem z cukru pudru (cukier puder + odrobina soku z cytryny/mleka)."
 ],
-    "homepage"=>[
-        "Baking has never been so easy and inspiring!"=>'Pieczenie nigdy nie było tak proste i inspirujące!',
-        "Discover the world of sweet baked goods with our recipe generator. Whether you're a beginner baker or an experienced master, you'll find inspiration here to delight your palate."=>'Odkryj świat słodkich wypieków z naszym generatorem przepisów. Niezależnie od tego, czy jesteś początkującym cukiernikiem, czy doświadczonym mistrzem, znajdziesz tu inspiracje, które zachwycą Twoje podniebienie.',
-        "Your Ideal Cake in a Few Clicks"=>"Twoje Idealne Ciasto w Kilka Kliknięć",
-        "Dreaming of a fluffy sponge cake, a creamy cheesecake, or maybe a crispy apple pie? Tell us what ingredients you have on hand, what your mood is, and we'll generate the perfect recipe for you. No more boring bakes or wasted time searching!"=>'Marzysz o puszystym biszkopcie, kremowym serniku, a może chrupiącej szarlotce? Powiedz nam, jakie składniki masz pod ręką, jaki masz nastrój, a my wygenerujemy przepis idealnie dopasowany do Ciebie. Koniec z nudnymi wypiekami i marnowaniem czasu na szukanie!'
+    'homepage' => [
+        'welcome_title' => 'Witaj w Słodkiej Fabryce!',
+        'welcome_subtitle' => 'Odkryj kolekcję naszych ulubionych, sprawdzonych przepisów na ciasta, ciasteczka i desery.',
     ],
-    "about"=>[
-        "About Us – Passion for Sweets and Innovation"=>'O nas – Pasja do Słodkości i Innowacji',
-        "Welcome to our sweet world! We are a team of baking enthusiasts who believe everyone deserves the perfect cake. We noticed how much time it can take to find the right recipe, adapt it to available ingredients, or simply discover new inspiration. We decided to change that.\nOur mission is to simplify the baking process and make it even more enjoyable and accessible for everyone. We've created a tool that not only generates recipes but also inspires culinary experiments, helping you use what you have in your kitchen."=>'Witaj w naszym słodkim świecie! Jesteśmy zespołem pasjonatów pieczenia, którzy wierzą, że każdy zasługuje na idealne ciasto. Zauważyliśmy, jak wiele czasu potrafi zająć szukanie odpowiedniego przepisu, dostosowywanie go do dostępnych składników czy po prostu znalezienie nowej inspiracji. Postanowiliśmy to zmienić.\nNaszą misją jest uproszczenie procesu pieczenia i sprawienie, by stał się on jeszcze bardziej przyjemny i dostępny dla każdego. Stworzyliśmy narzędzie, które nie tylko generuje przepisy, ale także inspiruje do kulinarnych eksperymentów, pomagając Ci wykorzystać to, co masz w swojej kuchni.',
-        "We believe that the best memories are often made around the table, with a piece of delicious, homemade cake. We want to help you create these magical moments by offering a tool that will make baking your favorite adventure."=>'Wierzymy, że najlepsze wspomnienia często tworzą się przy stole, z kawałkiem pysznego, domowego ciasta. Chcemy pomóc Ci tworzyć te magiczne chwile, oferując narzędzie, które sprawi, że pieczenie stanie się Twoją ulubioną przygodą.'
-    ]
+    'register_form' => [
+        'title' => 'Zarejestruj się',
+        'google_button' => 'Kontynuuj z Google',
+        'separator' => 'Lub',
+        'email_placeholder' => 'Adres e-mail',
+        'password_placeholder' => 'Hasło',
+        'confirm_password_placeholder' => 'Potwierdź hasło',
+        'submit_button' => 'Zarejestruj się',
+        'has_account_prompt' => 'Masz już konto?',
+        'login_link' => 'Zaloguj się',
+        'terms_agreement_prefix' => 'Klikając Kontynuuj, zgadzasz się na nasze',
+        'terms_link' => 'Warunki korzystania z usługi',
+        'terms_separator' => 'oraz',
+        'privacy_link' => 'Politykę Prywatności',
+    ],
+    'weather_widget' => [
+        'title' => 'Pogoda',
+        'city' => 'Miasto:',
+        'date' => 'Data:',
+        'temperature' => 'Temperatura:',
+        'feels_like' => 'Odczuwalna:',
+        'wind' => 'Wiatr:',
+        'wind_direction' => 'kierunek:',
+        'pressure' => 'Ciśnienie:',
+        'humidity' => 'Wilgotność:',
+        'precipitation' => 'Opady:',
+        'no_data' => 'Brak danych pogodowych.',
+    ],
     ];

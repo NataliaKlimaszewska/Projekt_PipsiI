@@ -132,15 +132,36 @@ return [
         "A classic festive cake, consisting of a delicate yeast dough wrapped around a rich, moist poppy seed filling with nuts and dried fruits."=>"Ein klassischer festlicher Kuchen, bestehend aus einem zarten Hefeteig, der eine reichhaltige, saftige Mohnfüllung mit Nüssen und Trockenfrüchten umhüllt.",
         "Prepare Yeast Dough:** In a large bowl, combine flour, sugar, and yeast. Add warm milk, melted butter, egg, and salt. Knead the dough for about 10 minutes until smooth and elastic. Cover with a clean cloth and let rise in a warm place for 1-1.5 hours, or until doubled in size.\r\n2.  **Prepare Poppy Seed Filling:** While the dough rises, place ground poppy seeds in a saucepan with milk and honey. Bring to a simmer, stirring constantly, until the milk is absorbed and mixture thickens (about 5-7 minutes). Remove from heat and stir in raisins, walnuts, and orange zest (if using). Let cool completely. Once cool, stir in the lightly beaten egg white.\r\n3.  **Assemble Roll:** On a lightly floured surface, roll out the risen dough into a large rectangle (approx. 30x40 cm). Spread the cooled poppy seed filling evenly over the dough, leaving a small border around the edges.\r\n4.  Starting from one long side, tightly roll up the dough into a log. Pinch the seam to seal it.\r\n5.  **Bake:** Carefully transfer the roll (seam-side down) onto a baking sheet lined with parchment paper. Preheat oven to 170°C (340°F) conventional. Bake for 35-45 minutes, or until golden brown.\r\n6.  **Cooling & Glaze:** Let cool completely. You can finish it with a simple powdered sugar glaze (powdered sugar + a little lemon juice/milk) once cooled."=>"Hefeteig zubereiten:** In einer großen Schüssel Mehl, Zucker und Hefe vermischen. Warme Milch, geschmolzene Butter, Ei und Salz hinzufügen. Den Teig etwa 10 Minuten kneten, bis er glatt und elastisch ist. Mit einem sauberen Tuch abdecken und an einem warmen Ort 1-1,5 Stunden gehen lassen, oder bis sich das Volumen verdoppelt hat.\r\n2.  **Mohnfüllung zubereiten:** Während der Teig geht, gemahlenen Mohn mit Milch und Honig in einem Topf geben. Unter ständigem Rühren köcheln lassen, bis die Milch aufgenommen ist und die Mischung andickt (ca. 5-7 Minuten). Vom Herd nehmen und Rosinen, Walnüsse und Orangenabrieb (falls verwendet) einrühren. Vollständig abkühlen lassen. Sobald die Mischung abgekühlt ist, das leicht verquirlte Eiweiß unterrühren.\r\n3.  **Mohnrolle zusammensetzen:** Auf einer leicht bemehlten Arbeitsfläche den aufgegangenen Teig zu einem großen Rechteck (ca. 30x40 cm) ausrollen. Die abgekühlte Mohnfüllung gleichmäßig auf dem Teig verteilen, dabei einen kleinen Rand lassen.\r\n4.  Von einer langen Seite beginnend den Teig fest zu einer Rolle aufrollen. Die Naht festdrücken, um sie zu versiegeln.\r\n5.  **Backen:** Die Rolle (Naht nach unten) vorsichtig auf ein mit Backpapier ausgelegtes Backblech legen. Backofen auf 170°C Ober-/Unterhitze vorheizen. 35-45 Minuten backen, oder bis sie goldbraun ist.\r\n6.  **Abkühlen & Glasur:** Vollständig abkühlen lassen. Nach dem Abkühlen kann sie mit einer einfachen Puderzuckerglasur (Puderzucker + etwas Zitronensaft/Milch) verziert werden."
     ],
-    "homepage"=>[
-        "Baking has never been so easy and inspiring!"=>"Backen war noch nie so einfach und inspirierend!",
-        "Discover the world of sweet baked goods with our recipe generator. Whether you're a beginner baker or an experienced master, you'll find inspiration here to delight your palate."=>"Entdecken Sie die Welt der süßen Backwaren mit unserem Rezeptgenerator. Egal, ob Sie ein Backanfänger oder ein erfahrener Meister sind, hier finden Sie Inspiration, um Ihren Gaumen zu verwöhnen.",
-        "Your Ideal Cake in a Few Clicks"=>"Ihr ideales Kuchenstück in wenigen Klicks",
-        "Dreaming of a fluffy sponge cake, a creamy cheesecake, or maybe a crispy apple pie? Tell us what ingredients you have on hand, what your mood is, and we'll generate the perfect recipe for you. No more boring bakes or wasted time searching!"=>"Träumen Sie von einem fluffigen Biskuitkuchen, einem cremigen Käsekuchen oder vielleicht einem knusprigen Apfelkuchen? Sagen Sie uns, welche Zutaten Sie zur Hand haben, wie Ihre Stimmung ist, und wir erstellen das perfekte Rezept für Sie. Schluss mit langweiligem Backen und vergeudeter Zeit bei der Suche!"
+    'homepage' => [
+        'welcome_title' => 'Willkommen in der Sweet Factory!',
+        'welcome_subtitle' => 'Entdecke unsere Sammlung beliebter, bewährter Rezepte für Kuchen, Kekse und Desserts.',
     ],
-    "about"=>[
-        "About Us – Passion for Sweets and Innovation"=>"Über uns – Leidenschaft für Süßes und Innovation",
-        "Welcome to our sweet world! We are a team of baking enthusiasts who believe everyone deserves the perfect cake. We noticed how much time it can take to find the right recipe, adapt it to available ingredients, or simply discover new inspiration. We decided to change that.\nOur mission is to simplify the baking process and make it even more enjoyable and accessible for everyone. We've created a tool that not only generates recipes but also inspires culinary experiments, helping you use what you have in your kitchen."=>"Willkommen in unserer süßen Welt! Wir sind ein Team von Backbegeisterten, die glauben, dass jeder den perfekten Kuchen verdient. Wir haben festgestellt, wie viel Zeit es in Anspruch nehmen kann, das richtige Rezept zu finden, es an verfügbare Zutaten anzupassen oder einfach neue Inspirationen zu entdecken. Das wollten wir ändern.\nUnsere Mission ist es, den Backprozess zu vereinfachen und ihn für jedermann noch angenehmer und zugänglicher zu machen. Wir haben ein Tool entwickelt, das nicht nur Rezepte generiert, sondern auch zu kulinarischen Experimenten anregt und Ihnen hilft, das zu verwenden, was Sie in Ihrer Küche haben.",
-        "We believe that the best memories are often made around the table, with a piece of delicious, homemade cake. We want to help you create these magical moments by offering a tool that will make baking your favorite adventure."=>"Wir glauben, dass die schönsten Erinnerungen oft am Tisch entstehen, mit einem Stück köstlichen, selbstgemachten Kuchen. Wir möchten Ihnen helfen, diese magischen Momente zu schaffen, indem wir Ihnen ein Tool anbieten, das das Backen zu Ihrem Lieblingsabenteuer macht."
-    ]
+    'register_form' => [
+        'title' => 'Registrieren',
+        'google_button' => 'Mit Google fortfahren',
+        'separator' => 'Oder',
+        'email_placeholder' => 'E-Mail',
+        'password_placeholder' => 'Passwort',
+        'confirm_password_placeholder' => 'Passwort bestätigen',
+        'submit_button' => 'Registrieren',
+        'has_account_prompt' => 'Schon ein Konto?',
+        'login_link' => 'Anmelden',
+        'terms_agreement_prefix' => 'Indem du auf „Weiter“ klickst, stimmst du unseren',
+        'terms_link' => 'Nutzungsbedingungen',
+        'terms_separator' => 'und',
+        'privacy_link' => 'Datenschutzrichtlinie',
+    ],
+    'weather_widget' => [
+        'title' => 'Wetter',
+        'city' => 'Stadt:',
+        'date' => 'Datum:',
+        'temperature' => 'Temperatur:',
+        'feels_like' => 'Gefühlte Temp.:',
+        'wind' => 'Wind:',
+        'wind_direction' => 'Richtung:',
+        'pressure' => 'Luftdruck:',
+        'humidity' => 'Luftfeuchtigkeit:',
+        'precipitation' => 'Niederschlag:',
+        'no_data' => 'Keine Wetterdaten verfügbar.',
+    ],
 ];

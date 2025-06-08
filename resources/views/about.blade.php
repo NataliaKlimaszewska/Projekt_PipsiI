@@ -89,13 +89,13 @@
         </div>
 
         <div class="creator-card">
-            <img src="images/Marcin.jpg" alt="Zdjęcie Natalii Klimaszewskiej" class="w-32 h-32 object-cover rounded-md mx-auto">
-            <h3 class="font-bold mt-4">Natalia Klimaszewska</h3>
+            <img src="images/Marcin.jpg" alt="Zdjęcie Marcina Szuszki" class="w-32 h-32 object-cover rounded-md mx-auto">
+            <h3 class="font-bold mt-4">Marcin Szuszko</h3>
             <span class="text-pink-500 font-semibold">{{ __('messages.about_creators.role_backend') }}</span>
         </div>
 
         <div class="creator-card">
-            <img src="..." alt="Zdjęcie Kamila Ziemiańskiego" class="w-32 h-32 object-cover rounded-md mx-auto">
+            <img src="images/Kamil.jpg" alt="Zdjęcie Kamila Ziemiańskiego" class="w-32 h-32 object-cover rounded-md mx-auto">
             <h3 class="font-bold mt-4">Kamil Ziemiański</h3>
             <span class="text-pink-500 font-semibold">{{ __('messages.about_creators.role_frontend') }}</span>
         </div>
@@ -103,6 +103,6 @@
     </div>
 
 </section>
-<body>
+</body>
 </html>
 @endsection
