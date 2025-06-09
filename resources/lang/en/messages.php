@@ -72,6 +72,7 @@ return [
         'ingredients' => 'Ingredients:',
         'instructions' => 'Instructions:',
         'back_to_list' => 'Back to list',
+        'print' => 'Print Recipe',
     ],
     'buttons' => [
         'create' => 'Create',

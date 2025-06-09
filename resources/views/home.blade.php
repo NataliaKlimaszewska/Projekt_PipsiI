@@ -1,14 +1,23 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-extrabold tracking-tight text-amber-700 sm:text-5xl md:text-6xl">
-            {{ __('messages.homepage.welcome_title') }}
-        </h1>
-        <p class="mt-4 max-w-2xl mx-auto text-xl text-amber-900">
-            {{ __('messages.homepage.welcome_subtitle') }}
-        </p>
+    <div class="relative w-full max-w-7xl mx-auto">
+
+        <div class="absolute top-4 right-4 hidden lg:block z-10">
+            <x-weather-widget />
+        </div>
+
+
+        <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-pink-700 sm:text-5xl md:text-6xl">
+                {{ __('messages.homepage.welcome_title') }}
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-pink-900">
+                {{ __('messages.homepage.welcome_subtitle') }}
+            </p>
+        </div>
     </div>
+
 
     <div id="cake-carousel" class="relative w-full max-w-5xl mx-auto my-8" data-carousel="slide">
         <div class="relative h-56 overflow-hidden rounded-xl md:h-96">
@@ -26,38 +35,38 @@
             </div>
         </div>
         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-            <button type="button" class="w-3 h-3 bg-amber-400 rounded-full" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 bg-amber-400 rounded-full" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 bg-amber-400 rounded-full" data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 bg-amber-400 rounded-full" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 bg-pink-400 rounded-full" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 bg-pink-400 rounded-full" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 bg-pink-400 rounded-full" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 bg-pink-400 rounded-full" data-carousel-slide-to="3"></button>
         </div>
         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-200/50 group-hover:bg-amber-300">
-            <svg class="w-4 h-4 text-amber-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
-        </span>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-200/50 group-hover:bg-pink-300">
+                <svg class="w-4 h-4 text-pink-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
+            </span>
         </button>
         <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-200/50 group-hover:bg-amber-300">
-            <svg class="w-4 h-4 text-amber-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
-        </span>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-200/50 group-hover:bg-pink-300">
+                <svg class="w-4 h-4 text-pink-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+            </span>
         </button>
     </div>
 
+
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 py-8">
         @foreach($recipes as $recipe)
-            <div class="flex flex-col bg-amber-50 shadow-md rounded-2xl p-4 h-full">
+            <div class="flex flex-col bg-pink-50 shadow-md rounded-2xl p-4 h-full">
                 <img src="{{ asset($recipe->obrazek_url) }}" alt="{{ $recipe->nazwa }}" class="w-full h-48 object-cover rounded-xl mb-4">
-                <h2 class="text-lg font-semibold text-amber-800 mb-2">{{ $recipe->nazwa }}</h2>
-                <p class="text-sm text-amber-900 flex-grow">
+                <h2 class="text-lg font-semibold text-pink-800 mb-2">{{ $recipe->nazwa }}</h2>
+                <p class="text-sm text-pink-900 flex-grow">
                     {{ Str::limit($recipe->opis, 120) }}
                 </p>
-                <a href="{{ route('przepisy.show', $recipe->id) }}" class="mt-4 inline-block px-4 py-2 bg-amber-600 text-white rounded-md text-center hover:bg-amber-700 transition">
+                <a href="{{ route('przepisy.show', $recipe->id) }}" class="mt-4 inline-block px-4 py-2 bg-pink-600 text-white rounded-md text-center hover:bg-pink-700 transition">
                     Zobacz więcej
                 </a>
             </div>
         @endforeach
     </div>
-
-    <x-weather-widget/>
 @endsection
+
 
