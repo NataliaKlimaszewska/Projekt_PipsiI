@@ -35,14 +35,18 @@
 
                 <!-- Opis -->
                 <div class="text-gray-700">
-                    <h2 class="text-xl font-semibold text-gray-600 mb-2">Opis:</h2>
+                    <h2 class="text-xl font-semibold text-gray-600 mb-2">
+                        {{ __('messages.recipe_page.description') }}
+                    </h2>
                     <p class="text-base leading-relaxed">{{ $recipe->opis }}</p>
                 </div>
 
                 <!-- Składniki -->
                 @if($recipe->ingredients->count())
                     <div>
-                        <h2 class="text-xl font-semibold text-gray-600 mb-2">Składniki:</h2>
+                        <h2 class="text-xl font-semibold text-gray-600 mb-2">
+                            {{ __('messages.recipe_page.ingredients') }}
+                        </h2>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 pl-2">
                             @foreach($recipe->ingredients as $ingredient)
                                 <li>{{ $ingredient->ilosc }} {{ $ingredient->jednostka }} {{ $ingredient->nazwa }}</li>
@@ -53,7 +57,9 @@
 
                 <!-- Sposób wykonania -->
                 <div>
-                    <h2 class="text-xl font-semibold text-gray-600 mb-2">Sposób wykonania:</h2>
+                    <h2 class="text-xl font-semibold text-gray-600 mb-2">
+                        {{ __('messages.recipe_page.instructions') }}
+                    </h2>
                     <p class="whitespace-pre-line text-gray-700 text-base leading-relaxed">{{ $recipe->sposob_wykonania }}</p>
                 </div>
             </div>
@@ -63,20 +69,14 @@
         <div class="flex justify-center gap-6 mt-8">
             <a href="{{ url()->previous() }}"
                class="text-pink-600 hover:text-pink-800 font-medium transition">
-                ← Wróć do listy
+                ← {{ __('messages.recipe_page.back_to_list') }}
             </a>
             <button onclick="window.print()"
                     class="text-pink-600 hover:text-pink-800 font-medium transition">
-                🖨️ Drukuj przepis
+                🖨️ {{ __('messages.recipe_page.print') ?? 'Drukuj przepis' }}
             </button>
         </div>
     </div>
 @endsection
-
-
-
-
-
-
 
 

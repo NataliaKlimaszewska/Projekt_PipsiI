@@ -177,4 +177,10 @@ return [
         'precipitation' => 'Opady:',
         'no_data' => 'Brak danych pogodowych.',
     ],
+    'recipe_page' => [
+        'description' => 'Opis:',
+        'ingredients' => 'Składniki:',
+        'instructions' => 'Sposób wykonania:',
+        'back_to_list' => 'Wróć do listy',
+    ],
     ];

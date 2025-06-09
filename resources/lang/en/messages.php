@@ -67,6 +67,12 @@ return [
         'precipitation' => 'Precipitation:',
         'no_data' => 'No weather data available.',
     ],
+    'recipe_page' => [
+        'description' => 'Description:',
+        'ingredients' => 'Ingredients:',
+        'instructions' => 'Instructions:',
+        'back_to_list' => 'Back to list',
+    ],
     'buttons' => [
         'create' => 'Create',
         'cancel' => 'Cancel',
