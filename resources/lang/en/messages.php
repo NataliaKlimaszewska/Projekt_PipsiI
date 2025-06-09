@@ -31,7 +31,12 @@ return [
         'title' => 'Your Profile',
         'username_label' => 'Username:',
         'email_label' => 'Email:',
-        'favorites_header' => 'Favorite Recipes',
+        'avatar_label' => 'Avatar:',
+        'bio_label' => 'Bio:',
+        'update_header' => 'Update Profile (temporary)',
+        'save_button' => 'Save Changes',
+
+
     ],
     'homepage' => [
         'welcome_title' => 'Welcome to the Sweet Factory!',

@@ -40,8 +40,12 @@ return [
         'title' => 'Dein Profil',
         'username_label' => 'Benutzername:',
         'email_label' => 'E-Mail:',
-        'favorites_header' => 'Lieblingsrezepte',
+        'avatar_label' => 'Avatar:',
+        'bio_label' => 'Biografie:',
+        'update_header' => 'Profil aktualisieren (vorübergehend)',
+        'save_button' => 'Änderungen speichern',
     ],
+
     'ingredients'=>[
         "apple"=> 'Apfel',
         "carrot"=> "Karotte",

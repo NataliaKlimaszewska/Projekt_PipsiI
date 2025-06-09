@@ -26,11 +26,15 @@ return [
         'copyright' => '© :year :name. Todos los derechos reservados.',
     ],
     'profile_page' => [
-        'title' => 'Your Profile',
-        'username_label' => 'Username:',
-        'email_label' => 'Email:',
-        'favorites_header' => 'Favorite Recipes',
+        'title' => 'Tu perfil',
+        'username_label' => 'Nombre de usuario:',
+        'email_label' => 'Correo electrónico:',
+        'avatar_label' => 'Avatar:',
+        'bio_label' => 'Biografía:',
+        'update_header' => 'Actualizar perfil (temporal)',
+        'save_button' => 'Guardar cambios',
     ],
+
     'buttons' => [
         'create' => 'Crear',
         'update' => 'Actualizar',
