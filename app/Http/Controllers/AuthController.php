@@ -16,7 +16,7 @@ class AuthController extends Controller{
             return redirect()->intended('/');
         }
 
-        return redirect()->route('logIn')->withErrors([
+        return back()->withErrors([
             'email' => 'Nieprawidłowe dane logowania',
         ])->onlyInput("email");
     }

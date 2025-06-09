@@ -7,11 +7,18 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Http\\Controllers\\Api\\ConverterController' => $baseDir . '/app/Http/Controllers/Api/ConverterController.php',
+    'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\Ingredients' => $baseDir . '/app/Http/Controllers/Ingredients.php',
+    'App\\Http\\Controllers\\PrzepisController' => $baseDir . '/app/Http/Controllers/PrzepisController.php',
+    'App\\Http\\Controllers\\WeatherController' => $baseDir . '/app/Http/Controllers/WeatherController.php',
     'App\\Http\\Middleware\\SetLocaleMiddleware' => $baseDir . '/app/Http/Middleware/SetLocaleMiddleware.php',
+    'App\\Models\\Ingredients' => $baseDir . '/app/Models/Ingredients.php',
+    'App\\Models\\Recipe' => $baseDir . '/app/Models/Recipe.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
+    'App\\Services\\WeatherService' => $baseDir . '/app/Services/WeatherService.php',
+    'App\\View\\Components\\WeatherWidget' => $baseDir . '/app/View/Components/WeatherWidget.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
     'Brick\\Math\\BigInteger' => $vendorDir . '/brick/math/src/BigInteger.php',

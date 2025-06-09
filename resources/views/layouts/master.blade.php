@@ -26,8 +26,42 @@
             <div class="flex items-center">
                 <nav class="hidden md:flex md:items-center md:space-x-4">
                     <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="/">{{ __('messages.navigation.home') }}</a>
-                    <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="/logIn">{{ __('messages.navigation.login') }}</a>
-                    <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="/register">{{ __('messages.navigation.signup') }}</a>
+                    @auth
+                        {{-- JEŚLI UŻYTKOWNIK JEST ZALOGOWANY, POKAŻ TO: --}}
+                        <div class="relative">
+                            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer object-cover"
+                                 src="{{ auth()->user()->avatar_path ? asset('storage/' . auth()->user()->avatar_path) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=random' }}"
+                                 alt="User dropdown">
+
+                            <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-56 dark:bg-gray-700 dark:divide-gray-600">
+                                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                                    <div class="font-bold">{{ auth()->user()->name }}</div>
+                                    <div class="font-medium truncate">{{ auth()->user()->email }}</div>
+                                </div>
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                                    <li>
+                                        <a href="{{ route('profile.edit') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mój Profil</a>
+                                    </li>
+                                </ul>
+                                <div class="py-1">
+                                    {{-- Formularz wylogowania --}}
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault(); this.closest('form').submit();"
+                                           class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                            Wyloguj się
+                                        </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    @else
+                        {{-- JEŚLI UŻYTKOWNIK NIE JEST ZALOGOWANY, POKAŻ TO: --}}
+                        <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="{{ route('logIn') }}">{{ __('messages.navigation.login') }}</a>
+                        <a class="px-3 py-2 text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600 rounded-md" href="{{ route('register') }}">{{ __('messages.navigation.signup') }}</a>
+                    @endauth
                     <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="/about">{{ __('messages.navigation.meet_our_team') }}</a>
 
                     <div class="relative" x-data="{ langOpen: false }" @click.away="langOpen = false">

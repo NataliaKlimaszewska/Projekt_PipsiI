@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     <div class="flex items-center justify-center min-h-screen bg-pink-100">
 
         {{-- Karta logowania z zaokrąglonymi rogami i cieniem --}}
@@ -13,6 +14,15 @@
 
             <div class="w-full p-8 lg:w-1/2">
                 <h1 class="text-2xl font-semibold mb-4">Login</h1>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('logIn') }}" method="POST">
                     @csrf
                     <div class="mb-4">

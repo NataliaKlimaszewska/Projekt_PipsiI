@@ -522,11 +522,18 @@ class ComposerStaticInitb3bf862f94b5273c994294997e5a504d
 
     public static $classMap = array (
         'App\\Http\\Controllers\\Api\\ConverterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ConverterController.php',
+        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Ingredients' => __DIR__ . '/../..' . '/app/Http/Controllers/Ingredients.php',
+        'App\\Http\\Controllers\\PrzepisController' => __DIR__ . '/../..' . '/app/Http/Controllers/PrzepisController.php',
+        'App\\Http\\Controllers\\WeatherController' => __DIR__ . '/../..' . '/app/Http/Controllers/WeatherController.php',
         'App\\Http\\Middleware\\SetLocaleMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/SetLocaleMiddleware.php',
+        'App\\Models\\Ingredients' => __DIR__ . '/../..' . '/app/Models/Ingredients.php',
+        'App\\Models\\Recipe' => __DIR__ . '/../..' . '/app/Models/Recipe.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Services\\WeatherService' => __DIR__ . '/../..' . '/app/Services/WeatherService.php',
+        'App\\View\\Components\\WeatherWidget' => __DIR__ . '/../..' . '/app/View/Components/WeatherWidget.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',

@@ -13,6 +13,9 @@ Route::middleware('web')->group(function () {
     Route::get('/quiz', [\App\Http\Controllers\Controller::class, 'quiz']);
     Route::post('/ingredients/save', [\App\Http\Controllers\Controller::class, 'save'])->name('save.ingredients');
     Route::get('/przepisy/{id}', [PrzepisController::class, 'show'])->name('przepisy.show');
+    Route::get('/profile/edit', function () {
+        return view('profile.edit'); // Utwórz ten widok poniżej
+    })->name('profile.edit')->middleware('auth');
     Route::middleware('guest')->group(function () {
         Route::get('/logIn', [AuthController::class, 'showLoginForm'])->name('logIn');
         Route::post('/logIn', [AuthController::class, 'handleLogin']);
