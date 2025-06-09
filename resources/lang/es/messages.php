@@ -25,6 +25,12 @@ return [
         'my_profile' => 'Mi perfil',
         'copyright' => '© :year :name. Todos los derechos reservados.',
     ],
+    'profile_page' => [
+        'title' => 'Your Profile',
+        'username_label' => 'Username:',
+        'email_label' => 'Email:',
+        'favorites_header' => 'Favorite Recipes',
+    ],
     'buttons' => [
         'create' => 'Crear',
         'update' => 'Actualizar',

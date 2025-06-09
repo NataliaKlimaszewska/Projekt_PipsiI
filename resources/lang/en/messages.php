@@ -27,6 +27,12 @@ return [
         'my_profile' => 'My Profile',
         'copyright' => '© :year :name. All rights reserved.',
     ],
+    'profile_page' => [
+        'title' => 'Your Profile',
+        'username_label' => 'Username:',
+        'email_label' => 'Email:',
+        'favorites_header' => 'Favorite Recipes',
+    ],
     'homepage' => [
         'welcome_title' => 'Welcome to the Sweet Factory!',
         'welcome_subtitle' => 'Discover our collection of favorite, tested recipes for cakes, cookies, and desserts.',
