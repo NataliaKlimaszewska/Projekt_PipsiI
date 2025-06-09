@@ -12,6 +12,13 @@ return [
         'ideas' => 'Pomysły',
         'login' => 'Zaloguj się',
         'signup' => 'Zarejestruj się',
+        'my_profile' => 'Mój Profil',
+        'logout' => 'Wyloguj się'
+    ],
+    'recipe_list' => [
+        'search_placeholder' => 'Wyszukaj przepis...',
+        'search_button' => 'Szukaj',
+        'view_recipe_button' => 'Zobacz więcej',
     ],
     'about_creators' => [
         'title' => 'Poznaj Twórców :)',
@@ -100,7 +107,7 @@ return [
     ],
 
     'homepage' => [
-        'welcome_title' => 'Witaj w Słodkiej Fabryce!',
+        'welcome_title' => 'Witaj w Sweet Factory!',
         'welcome_subtitle' => 'Odkryj kolekcję naszych ulubionych, sprawdzonych przepisów na ciasta, ciasteczka i desery.',
     ],
     'register_form' => [

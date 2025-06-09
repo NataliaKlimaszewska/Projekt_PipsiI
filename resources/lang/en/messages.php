@@ -11,6 +11,8 @@ return [
         'create_recipe' => 'Create Your Own Recipe',
         'ideas' => 'Ideas',
         'signup' => 'Sign Up',
+        'my_profile' => 'My Profile',
+        'logout' => 'Sign Out',
     ],
     'about_creators' => [
         'title' => 'Meet Creators :)',
@@ -18,6 +20,11 @@ return [
         'role_pm' => 'Project Manager',
         'role_backend' => 'Backend',
         'role_frontend' => 'Frontend',
+    ],
+    'recipe_list' => [
+        'search_placeholder' => 'Search for a recipe...',
+        'search_button' => 'Search',
+        'view_recipe_button' => 'View Recipe',
     ],
     'footer' => [
         'slogan' => 'A sweet factory for everyone.',

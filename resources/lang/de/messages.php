@@ -12,6 +12,8 @@ return [
         'ideas' => 'Ideen',
         'login' => 'Einloggen',
         'signup' => 'Registrieren',
+        'my_profile' => 'Mein Profil',
+        'logout' => 'Abmelden',
     ],
     'about_creators' => [
         'title' => 'Lernt die Schöpfer kennen :)',
@@ -41,6 +43,11 @@ return [
         'username_label' => 'Benutzername:',
         'email_label' => 'E-Mail:',
         'favorites_header' => 'Lieblingsrezepte',
+    ],
+    'recipe_list' => [
+        'search_placeholder' => 'Rezept suchen...',
+        'search_button' => 'Suchen',
+        'view_recipe_button' => 'Rezept ansehen',
     ],
     'ingredients'=>[
         "apple"=> 'Apfel',

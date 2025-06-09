@@ -9,6 +9,8 @@ return [
         'meet_our_team' => 'Conozca a Nuestro Equipo',
         'login' => 'Acceso',
         'signup' => 'Registro',
+        'my_profile' => 'Mi Perfil',
+        'logout' => 'Cerrar sesión',
     ],
     'about_creators' => [
         'title' => 'Conoce a los Creadores :)',
@@ -25,11 +27,16 @@ return [
         'my_profile' => 'Mi perfil',
         'copyright' => '© :year :name. Todos los derechos reservados.',
     ],
+    'recipe_list' => [
+        'search_placeholder' => 'Buscar una receta...',
+        'search_button' => 'Buscar',
+        'view_recipe_button' => 'Ver Receta',
+    ],
     'profile_page' => [
-        'title' => 'Your Profile',
-        'username_label' => 'Username:',
-        'email_label' => 'Email:',
-        'favorites_header' => 'Favorite Recipes',
+        'title' => 'Tu Perfil',
+        'username_label' => 'Nombre de usuario:',
+        'email_label' => 'Correo electrónico:',
+        'favorites_header' => 'Recetas Favoritas',
     ],
     'buttons' => [
         'create' => 'Crear',

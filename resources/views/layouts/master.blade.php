@@ -27,14 +27,14 @@
                                  src="{{ auth()->user()->avatar_path ? asset('storage/' . auth()->user()->avatar_path) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=random' }}"
                                  alt="User dropdown">
 
-                            <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-56 dark:bg-gray-700 dark:divide-gray-600">
-                                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-pink-100 rounded-lg shadow-sm w-56 dark:bg-pink-700 dark:divide-pink-600">
+                                <div class="px-4 py-3 text-sm text-pink-900 dark:text-white">
                                     <div class="font-bold">{{ auth()->user()->name }}</div>
                                     <div class="font-medium truncate">{{ auth()->user()->email }}</div>
                                 </div>
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                                <ul class="py-2 text-sm text-pink-700 dark:text-pink-200" aria-labelledby="avatarButton">
                                     <li>
-                                        <a href="{{ route('profile.edit') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mój Profil</a>
+                                        <a href="{{ route('profile.edit') }}" class="block px-4 py-2 hover:bg-pink-100 dark:hover:bg-pink-600 dark:hover:text-white">{{ __('messages.navigation.my_profile') }}</a>
                                     </li>
                                 </ul>
                                 <div class="py-1">
@@ -43,8 +43,8 @@
                                         @csrf
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault(); this.closest('form').submit();"
-                                           class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                                            Wyloguj się
+                                           class="block px-4 py-2 text-sm text-pink-700 hover:bg-pink-100 dark:hover:bg-pink-600 dark:text-pink-200 dark:hover:text-white">
+                                            {{ __('messages.navigation.logout') }}
                                         </a>
                                     </form>
                                 </div>
