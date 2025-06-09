@@ -1,14 +1,23 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-extrabold tracking-tight text-pink-700 sm:text-5xl md:text-6xl">
-            {{ __('messages.homepage.welcome_title') }}
-        </h1>
-        <p class="mt-4 max-w-2xl mx-auto text-xl text-pink-900">
-            {{ __('messages.homepage.welcome_subtitle') }}
-        </p>
+    <div class="relative w-full max-w-7xl mx-auto">
+
+        <div class="absolute top-4 right-4 hidden lg:block z-10">
+            <x-weather-widget />
+        </div>
+
+
+        <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-pink-700 sm:text-5xl md:text-6xl">
+                {{ __('messages.homepage.welcome_title') }}
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-pink-900">
+                {{ __('messages.homepage.welcome_subtitle') }}
+            </p>
+        </div>
     </div>
+
 
     <div id="cake-carousel" class="relative w-full max-w-5xl mx-auto my-8" data-carousel="slide">
         <div class="relative h-56 overflow-hidden rounded-xl md:h-96">
@@ -32,16 +41,17 @@
             <button type="button" class="w-3 h-3 bg-pink-400 rounded-full" data-carousel-slide-to="3"></button>
         </div>
         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-200/50 group-hover:bg-pink-300">
-            <svg class="w-4 h-4 text-pink-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
-        </span>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-200/50 group-hover:bg-pink-300">
+                <svg class="w-4 h-4 text-pink-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
+            </span>
         </button>
         <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-200/50 group-hover:bg-pink-300">
-            <svg class="w-4 h-4 text-pink-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
-        </span>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-pink-200/50 group-hover:bg-pink-300">
+                <svg class="w-4 h-4 text-pink-900" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+            </span>
         </button>
     </div>
+
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 py-8">
         @foreach($recipes as $recipe)
@@ -57,7 +67,6 @@
             </div>
         @endforeach
     </div>
-
-    <x-weather-widget/>
 @endsection
+
 
