@@ -26,6 +26,28 @@ SET time_zone = "+00:00";
 --
 -- Struktura tabeli dla tabeli `kategorie`
 --
+CREATE TABLE produkty2 (
+                          id INT AUTO_INCREMENT PRIMARY KEY,
+                          nazwa VARCHAR(255) NOT NULL,
+                          id_przepisu INT NOT NULL,
+                          ilosc VARCHAR(50),
+                          jednostka VARCHAR(50),
+                          FOREIGN KEY (id_przepisu) REFERENCES przepisy(id) ON DELETE CASCADE
+);
+
+INSERT INTO produkty2 (nazwa, id_przepisu, ilosc, jednostka) VALUES
+                                                                 ('Whisk flour', 3, '1', 'cup'),
+                                                                 ('Baking powder', 3, '1', 'teaspoon'),
+                                                                 ('Salt', 3, '1/4', 'teaspoon'),
+                                                                 ('Eggs', 3, '4', 'pieces'),
+                                                                 ('Sugar', 3, '1', 'cup'),
+                                                                 ('Vanilla extract', 3, '1', 'teaspoon'),
+                                                                 ('Fresh fruits', 3, 'approx. 1-2', 'cups'),
+                                                                 ('Jell-O (gelatin dessert)', 3, '1', 'packet'),
+                                                                 ('Boiling water', 3, '1', 'cup'),
+                                                                 ('Cold water', 3, '1', 'cup');
+
+
 
 CREATE TABLE `kategorie` (
   `id` int(11) NOT NULL,
