@@ -12,9 +12,18 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    public function home()
+    public function home(Request $request)
     {
-        $recipes = Recipe::with('ingredients')->get();
+        $query = Recipe::with('ingredients');
+
+        if ($request->filled('search')) {
+            $query->where(function ($q) use ($request) {
+                $q->where('nazwa', 'like', '%' . $request->search . '%')
+                    ->orWhere('opis', 'like', '%' . $request->search . '%');
+            });
+        }
+
+        $recipes = $query->get();
         $products = Ingredients::all();
         $ingredientsGroups = (new IngredientsController())->getGroups();
 

@@ -28,10 +28,7 @@ class IngredientsController extends Controller
         return view('createRecipe', ['ingredientsGroups' => $this->getGroups(), 'showList' => false]);
     }
 
-    public function home()
-    {
-        return view('home', ['ingredientsGroups' => $this->getGroups(), 'showList' => true]);
-    }
+
 }
 
 

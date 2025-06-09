@@ -54,6 +54,23 @@
             </span>
         </button>
     </div>
+    <div class="max-w-4xl mx-auto px-4 mb-8">
+        <form method="GET" action="{{ url('/') }}" class="flex flex-col sm:flex-row gap-4 bg-pink-100 p-4 rounded-xl shadow">
+            <input
+                type="text"
+                name="search"
+                value="{{ request('search') }}"
+                placeholder="Wyszukaj przepis..."
+                class="flex-1 px-4 py-2 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            >
+            <button
+                type="submit"
+                class="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition"
+            >
+                Szukaj
+            </button>
+        </form>
+    </div>
 
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 py-8">
