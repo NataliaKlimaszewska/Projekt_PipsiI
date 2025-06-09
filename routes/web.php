@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PrzepisController;
 
 Route::middleware('web')->group(function () {
     Route::get('/', [\App\Http\Controllers\Controller::class, 'home']);
@@ -11,6 +12,7 @@ Route::middleware('web')->group(function () {
     Route::get('/createRecipe', [\App\Http\Controllers\Ingredients::class, 'addNewRecipe']);
     Route::get('/quiz', [\App\Http\Controllers\Controller::class, 'quiz']);
     Route::post('/ingredients/save', [\App\Http\Controllers\Controller::class, 'save'])->name('save.ingredients');
+    Route::get('/przepisy/{id}', [PrzepisController::class, 'show'])->name('przepisy.show');
     Route::middleware('guest')->group(function () {
         Route::get('/logIn', [AuthController::class, 'showLoginForm'])->name('logIn');
         Route::post('/logIn', [AuthController::class, 'handleLogin']);

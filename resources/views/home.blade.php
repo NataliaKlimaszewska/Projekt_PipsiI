@@ -57,11 +57,20 @@
     </div>
 
     {{-- Pętla z przepisami --}}
-    @foreach($recipes as $recipe)
-        <h2><strong>{{ $recipe->nazwa }}</strong></h2>
-        <p>{{ $recipe->sposob_wykonania }}</p>
-        <p>{{ $recipe->opis }}</p>
-        <br>
-    @endforeach
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        @foreach($recipes as $recipe)
+            <div style="border: 1px solid #ddd; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: #fff;">
+                <img src="{{ asset($recipe->obrazek_url) }}" alt="{{ $recipe->nazwa }}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
+                <h2 style="font-size: 1.2rem; color: #333;">{{ $recipe->nazwa }}</h2>
+                <p style="color: #555; font-size: 0.95rem; margin-bottom: 10px;">
+                    {{ Str::limit($recipe->opis, 120) }}
+                </p>
+                <a href="{{ route('przepisy.show', $recipe->id) }}" style="display: inline-block; padding: 8px 12px; background: #38b2ac; color: white; text-decoration: none; border-radius: 5px;">
+                    Zobacz więcej
+                </a>
+
+            </div>
+        @endforeach
+    </div>
     <x-weather-widget/>
 @endsection

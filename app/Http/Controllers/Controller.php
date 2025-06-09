@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ingrerdients;
+use App\Models\Ingredients as IngredientsModel;
+use App\Http\Controllers\Ingredients as IngredientsController;
+
+
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
 
-class Controller
+class Controller extends BaseController
 {
     public function home()
     {
-        $ingredientsController = new Ingredients();
-        $products = Ingrerdients::all();
+        $ingredientsController = new IngredientsController();
+        $products = IngredientsModel::all();
         $recipes = Recipe::all();
-        return view('home', compact('products'), compact('recipes'), ['ingredientsGroups' => $ingredientsController->getGroups()]);
+        return view('home',[
+            'products' => $products,
+            'recipes' => $recipes,
+            'ingredientsGroups' => $ingredientsController,
+        ]);
     }
 
     public function store(Request $request)
