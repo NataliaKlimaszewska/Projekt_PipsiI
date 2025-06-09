@@ -5,7 +5,7 @@
 
     <div class="flex items-center justify-center min-h-screen bg-pink-100">
 
-        {{-- Karta logowania z zaokrąglonymi rogami i cieniem --}}
+
         <div class="flex w-full max-w-4xl mx-4 sm:mx-0 bg-white shadow-lg rounded-lg overflow-hidden">
 
             <div class="hidden lg:block lg:w-1/2">

@@ -21,7 +21,7 @@
                 <nav class="hidden md:flex md:items-center md:space-x-4">
                     <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="/">{{ __('messages.navigation.home') }}</a>
                     @auth
-                        {{-- JEŚLI UŻYTKOWNIK JEST ZALOGOWANY, POKAŻ TO: --}}
+
                         <div class="relative">
                             <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer object-cover"
                                  src="{{ auth()->user()->avatar_path ? asset('storage/' . auth()->user()->avatar_path) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=random' }}"
@@ -38,7 +38,7 @@
                                     </li>
                                 </ul>
                                 <div class="py-1">
-                                    {{-- Formularz wylogowania --}}
+
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
                                         <a href="{{ route('logout') }}"
@@ -52,7 +52,7 @@
                         </div>
 
                     @else
-                        {{-- JEŚLI UŻYTKOWNIK NIE JEST ZALOGOWANY, POKAŻ TO: --}}
+
                         <a class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900" href="{{ route('logIn') }}">{{ __('messages.navigation.login') }}</a>
                         <a class="px-3 py-2 text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600 rounded-md" href="{{ route('register') }}">{{ __('messages.navigation.signup') }}</a>
                     @endauth
@@ -136,10 +136,10 @@
 <footer class="relative footer-background text-gray-700">
     <div class="container mx-auto px-6 py-12">
 
-        {{-- Kontener centrujący wszystkie elementy --}}
+
         <div class="flex flex-col items-center text-center space-y-8">
 
-            {{-- 1. Nazwa Firmy --}}
+
             <a href="/" class="text-3xl font-extrabold text-gray-900">
                 Sweet Factory
             </a>
@@ -160,7 +160,7 @@
 {{--                </form>--}}
 {{--            </div>--}}
 
-            {{-- 3, 4, 5. Pozostałe linki --}}
+
             <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-gray-600">
                 <a href="/about" class="hover:text-pink-600">{{ __('messages.footer.meet_creators') }}</a>
 
@@ -174,7 +174,7 @@
                 @endauth
             </nav>
 
-            {{-- Prawa autorskie --}}
+
             <p class="text-xs text-gray-400">
                 {{ __('messages.footer.copyright', ['year' => date('Y'), 'name' => 'Sweet Factory']) }}
             </p>

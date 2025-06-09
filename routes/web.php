@@ -14,7 +14,7 @@ Route::middleware('web')->group(function () {
     Route::post('/ingredients/save', [\App\Http\Controllers\Controller::class, 'save'])->name('save.ingredients');
     Route::get('/przepisy/{id}', [PrzepisController::class, 'show'])->name('przepisy.show');
     Route::get('/profile/edit', function () {
-        return view('profile.edit'); // Utwórz ten widok poniżej
+        return view('profile.edit');
     })->name('profile.edit')->middleware('auth');
     Route::middleware('guest')->group(function () {
         Route::get('/logIn', [AuthController::class, 'showLoginForm'])->name('logIn');
@@ -35,14 +35,14 @@ Route::get('/test-mail', function () {
 });
 
 Route::get('/language/{locale}', function ($locale) {
-    // Validate the locale
+
     $supportedLocales = ['en', 'pl', 'es', 'ru', 'fr', 'de'];
 
     if (in_array($locale, $supportedLocales)) {
-        // Store the locale in the session
+
         session()->put('locale', $locale);
 
-        // Optional: Store user's language preference if logged in
+
         if (auth()->check()) {
             auth()->user()->update(['locale' => $locale]);
         }

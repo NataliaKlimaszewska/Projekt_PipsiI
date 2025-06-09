@@ -1,4 +1,4 @@
-<div class="bg-amber-50 rounded-xl shadow p-6 text-gray-800 w-full max-w-md mx-auto mt-12">
+<div class="bg-pink-50 rounded-xl shadow p-6 text-gray-800 w-full max-w-md mx-auto mt-12">
     <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
         🌤 {{ __('messages.weather_widget.title') }}
     </h3>

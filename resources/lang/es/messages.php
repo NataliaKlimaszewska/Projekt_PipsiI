@@ -29,7 +29,7 @@ return [
         'create' => 'Crear',
         'update' => 'Actualizar',
         'cancel' => 'Cancel',
-        'print' => 'Imprimir', //generate
+        'print' => 'Imprimir',
         'back' => 'Volver',
     ],
     'ingredients'=>[

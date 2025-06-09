@@ -13,7 +13,7 @@ class WeatherService
 
     public function __construct()
     {
-        // Get an API key from .env file
+
         $this->apiKey = env('WEATHER_API_KEY');
         $this->client = new Client([
             'base_uri' => 'https://dobrapogoda24.pl/api/v1/weather/'

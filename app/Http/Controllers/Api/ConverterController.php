@@ -7,42 +7,42 @@ use Illuminate\Support\Facades\Validator;
 
 class ConverterController extends Controller
 {
-    // Conversion factors (base unit: grams)
+
     private $massUnits = [
-        'g' => 1,           // grams
-        'kg' => 1000,       // kilograms
-        'mg' => 0.001,      // milligrams
-        'lb' => 453.592,    // pounds
-        'oz' => 28.3495,    // ounces
+        'g' => 1,
+        'kg' => 1000,
+        'mg' => 0.001,
+        'lb' => 453.592,
+        'oz' => 28.3495,
     ];
 
-    // Conversion factors for volume to weight (for common baking ingredients)
+
     private $volumeToWeightConversions = [
-        // These are approximate and can vary by ingredient
+
         'flour' => [
-            'cup' => 120,   // 1 cup of all-purpose flour ≈ 120g
-            'tablespoon' => 7.8,  // 1 tablespoon of flour ≈ 7.8g
-            'teaspoon' => 2.6,    // 1 teaspoon of flour ≈ 2.6g
+            'cup' => 120,
+            'tablespoon' => 7.8,
+            'teaspoon' => 2.6,
         ],
         'sugar' => [
-            'cup' => 200,   // 1 cup of granulated sugar ≈ 200g
-            'tablespoon' => 12.5, // 1 tablespoon of sugar ≈ 12.5g
-            'teaspoon' => 4.2,    // 1 teaspoon of sugar ≈ 4.2g
+            'cup' => 200,
+            'tablespoon' => 12.5,
+            'teaspoon' => 4.2,
         ],
         'butter' => [
-            'cup' => 227,   // 1 cup of butter ≈ 227g
-            'tablespoon' => 14.2, // 1 tablespoon of butter ≈ 14.2g
-            'teaspoon' => 4.7,    // 1 teaspoon of butter ≈ 4.7g
+            'cup' => 227,
+            'tablespoon' => 14.2,
+            'teaspoon' => 4.7,
         ],
         'milk' => [
-            'cup' => 240,   // 1 cup of milk ≈ 240g
-            'tablespoon' => 15,   // 1 tablespoon of milk ≈ 15g
-            'teaspoon' => 5,      // 1 teaspoon of milk ≈ 5g
+            'cup' => 240,
+            'tablespoon' => 15,
+            'teaspoon' => 5,
         ],
         'water' => [
-            'cup' => 236.6, // 1 cup of water ≈ 236.6g
-            'tablespoon' => 14.8, // 1 tablespoon of water ≈ 14.8g
-            'teaspoon' => 4.9,    // 1 teaspoon of water ≈ 4.9g
+            'cup' => 236.6,
+            'tablespoon' => 14.8,
+            'teaspoon' => 4.9,
         ]
     ];
 
@@ -66,10 +66,10 @@ class ConverterController extends Controller
 
         $data = $validator->validated();
 
-        // Convert to grams first
+
         $grams = $data['value'] * $this->massUnits[$data['from_unit']];
 
-        // Convert from grams to target unit
+
         $result = $grams / $this->massUnits[$data['to_unit']];
 
         return response()->json([

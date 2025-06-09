@@ -23,17 +23,17 @@
     <div class="min-h-screen bg-pink-100 py-12 px-4 sm:px-6 lg:px-8">
         <div id="print-area" class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
 
-            <!-- Obrazek przepisu -->
+
             @if($recipe->obrazek_url)
                 <img src="{{ asset($recipe->obrazek_url) }}" alt="{{ $recipe->nazwa }}"
                      class="w-full h-72 object-cover rounded-t-lg">
             @endif
 
-            <!-- Treść przepisu -->
+
             <div class="p-8 space-y-6">
                 <h1 class="text-4xl font-bold text-gray-800 text-center">{{ $recipe->nazwa }}</h1>
 
-                <!-- Opis -->
+
                 <div class="text-gray-700">
                     <h2 class="text-xl font-semibold text-gray-600 mb-2">
                         {{ __('messages.recipe_page.description') }}
@@ -41,7 +41,7 @@
                     <p class="text-base leading-relaxed">{{ $recipe->opis }}</p>
                 </div>
 
-                <!-- Składniki -->
+
                 @if($recipe->ingredients->count())
                     <div>
                         <h2 class="text-xl font-semibold text-gray-600 mb-2">
@@ -55,7 +55,7 @@
                     </div>
                 @endif
 
-                <!-- Sposób wykonania -->
+
                 <div>
                     <h2 class="text-xl font-semibold text-gray-600 mb-2">
                         {{ __('messages.recipe_page.instructions') }}
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <!-- Powrót i Drukuj -->
+
         <div class="flex justify-center gap-6 mt-8">
             <a href="{{ url()->previous() }}"
                class="text-pink-600 hover:text-pink-800 font-medium transition">

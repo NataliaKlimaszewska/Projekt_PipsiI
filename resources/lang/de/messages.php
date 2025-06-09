@@ -33,7 +33,7 @@ return [
         'create' => 'Erstellen',
         'update' => 'Aktualisieren',
         'cancel' => 'Abbrechen',
-        'print' => 'Drucken', //generate
+        'print' => 'Drucken',
         'back' => 'Zurück',
     ],
     'ingredients'=>[

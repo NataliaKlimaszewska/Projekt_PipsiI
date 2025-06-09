@@ -31,7 +31,7 @@ return [
     'buttons' => [
         'create' => 'Stwórz',
         'cancel' => '',
-        'generate' => 'Generuj', //generate
+        'generate' => 'Generuj',
         'back' => 'Cofnij',
     ],
     'ingredients'=>[
