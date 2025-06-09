@@ -159,4 +159,10 @@ return [
         'precipitation' => 'Precipitación:',
         'no_data' => 'No hay datos meteorológicos disponibles.',
     ],
+    'recipe_page' => [
+        'description' => 'Descripción:',
+        'ingredients' => 'Ingredientes:',
+        'instructions' => 'Preparación:',
+        'back_to_list' => 'Volver a la lista',
+    ],
 ];
