@@ -23,9 +23,22 @@
                     @auth
 
                         <div class="relative">
-                            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer object-cover"
-                                 src="{{ auth()->user()->avatar_path ? asset('storage/' . auth()->user()->avatar_path) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=random' }}"
-                                 alt="User dropdown">
+                            <img
+                                id="avatarButton"
+                                type="button"
+                                data-dropdown-toggle="userDropdown"
+                                data-dropdown-placement="bottom-start"
+                                class="w-10 h-10 rounded-full cursor-pointer object-cover"
+                                src="{{
+                                    session('avatar_path')
+                                    ? asset('storage/' . session('avatar_path'))
+                                    : (auth()->user()->avatar_path
+                                     ? asset('storage/' . auth()->user()->avatar_path)
+                                       : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()->name) . '&background=random')
+                                 }}"
+                                alt="Avatar użytkownika"
+                            />
+
 
                             <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-pink-100 rounded-lg shadow-sm w-56 dark:bg-pink-700 dark:divide-pink-600">
                                 <div class="px-4 py-3 text-sm text-pink-900 dark:text-white">

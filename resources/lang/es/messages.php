@@ -33,11 +33,22 @@ return [
         'view_recipe_button' => 'Ver Receta',
     ],
     'profile_page' => [
+<<<<<<< HEAD
         'title' => 'Tu Perfil',
         'username_label' => 'Nombre de usuario:',
         'email_label' => 'Correo electrónico:',
         'favorites_header' => 'Recetas Favoritas',
+=======
+        'title' => 'Tu perfil',
+        'username_label' => 'Nombre de usuario:',
+        'email_label' => 'Correo electrónico:',
+        'avatar_label' => 'Avatar:',
+        'bio_label' => 'Biografía:',
+        'update_header' => 'Actualizar perfil (temporal)',
+        'save_button' => 'Guardar cambios',
+>>>>>>> ebbb51f7a695da3958da8a4b7aa9e7e89e742e1a
     ],
+
     'buttons' => [
         'create' => 'Crear',
         'update' => 'Actualizar',

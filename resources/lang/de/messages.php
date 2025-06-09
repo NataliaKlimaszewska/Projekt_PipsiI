@@ -42,13 +42,20 @@ return [
         'title' => 'Dein Profil',
         'username_label' => 'Benutzername:',
         'email_label' => 'E-Mail:',
-        'favorites_header' => 'Lieblingsrezepte',
+        'avatar_label' => 'Avatar:',
+        'bio_label' => 'Biografie:',
+        'update_header' => 'Profil aktualisieren (vorübergehend)',
+        'save_button' => 'Änderungen speichern',
     ],
+<<<<<<< HEAD
     'recipe_list' => [
         'search_placeholder' => 'Rezept suchen...',
         'search_button' => 'Suchen',
         'view_recipe_button' => 'Rezept ansehen',
     ],
+=======
+
+>>>>>>> ebbb51f7a695da3958da8a4b7aa9e7e89e742e1a
     'ingredients'=>[
         "apple"=> 'Apfel',
         "carrot"=> "Karotte",

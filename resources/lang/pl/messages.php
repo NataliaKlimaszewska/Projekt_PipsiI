@@ -41,11 +41,18 @@ return [
         'generate' => 'Generuj',
         'back' => 'Cofnij',
     ],
+
     'profile_page' => [
-        'title' => 'Twój profil',
-        'username_label' => 'Nazwa użytkownika:',
-        'email_label' => 'Email:',
-        'favorites_header' => 'Ulubione przepisy',
+            'title' => 'Twój profil',
+            'username_label' => 'Nazwa użytkownika:',
+            'email_label' => 'Email:',
+            'avatar_label' => 'Avatar:',
+            'bio_label' => 'Bio:',
+            'update_header' => 'Zaktualizuj profil (tymczasowo)',
+            'save_button' => 'Zapisz zmiany',
+
+
+
     ],
     'ingredients'=>[
         "apple"=> 'jabłko',
