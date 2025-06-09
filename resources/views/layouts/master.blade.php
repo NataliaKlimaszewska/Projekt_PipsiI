@@ -10,12 +10,6 @@
 <header class="bg-white shadow-md" x-data="{ open: false }">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <button type="submit">Wyloguj</button>
-    </form>
-
-
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
 
