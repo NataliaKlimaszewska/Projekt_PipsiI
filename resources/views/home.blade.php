@@ -1,14 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="relative w-full max-w-7xl mx-auto">
-
-        <div class="absolute top-4 right-4 hidden lg:block z-10">
+    <div class="relative w-full">
+        <div class="absolute top-4 left-4 z-10">
             <x-weather-widget />
         </div>
+    </div>
 
 
-        <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+
+
+    <div>
+            <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-pink-700 sm:text-5xl md:text-6xl">
                 {{ __('messages.homepage.welcome_title') }}
             </h1>
