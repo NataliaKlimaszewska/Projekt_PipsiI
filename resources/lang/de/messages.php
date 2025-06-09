@@ -36,6 +36,12 @@ return [
         'print' => 'Drucken',
         'back' => 'Zurück',
     ],
+    'profile_page' => [
+        'title' => 'Dein Profil',
+        'username_label' => 'Benutzername:',
+        'email_label' => 'E-Mail:',
+        'favorites_header' => 'Lieblingsrezepte',
+    ],
     'ingredients'=>[
         "apple"=> 'Apfel',
         "carrot"=> "Karotte",

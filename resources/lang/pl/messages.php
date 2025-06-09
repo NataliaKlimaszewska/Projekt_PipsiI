@@ -34,6 +34,12 @@ return [
         'generate' => 'Generuj',
         'back' => 'Cofnij',
     ],
+    'profile_page' => [
+        'title' => 'Twój profil',
+        'username_label' => 'Nazwa użytkownika:',
+        'email_label' => 'Email:',
+        'favorites_header' => 'Ulubione przepisy',
+    ],
     'ingredients'=>[
         "apple"=> 'jabłko',
         "carrot"=> "marchew",
