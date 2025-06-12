@@ -47,15 +47,19 @@ return [
         'update_header' => 'Profil aktualisieren (vorübergehend)',
         'save_button' => 'Änderungen speichern',
     ],
-<<<<<<< HEAD
     'recipe_list' => [
         'search_placeholder' => 'Rezept suchen...',
         'search_button' => 'Suchen',
         'view_recipe_button' => 'Rezept ansehen',
     ],
-=======
-
->>>>>>> ebbb51f7a695da3958da8a4b7aa9e7e89e742e1a
+    'filter' => [
+        'search_label'       => 'Suche nach einem Rezept:',
+        'search_placeholder' => 'Namen eingeben...',
+        'search_button'      => 'Suchen',
+        'tags_label'         => 'Nach Tags filtern:',
+        'clear_button'       => 'Löschen',
+        'filter_button'      => 'Filtern',
+    ],
     'ingredients'=>[
         "apple"=> 'Apfel',
         "carrot"=> "Karotte",

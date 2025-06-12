@@ -6,10 +6,6 @@
             <x-weather-widget />
         </div>
     </div>
-
-
-
-
     <div>
             <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-pink-700 sm:text-5xl md:text-6xl">
@@ -55,47 +51,82 @@
         </button>
     </div>
     {{-- Formularz wyszukiwania --}}
-    <div class="max-w-4xl mx-auto px-4 mb-8">
-        <form method="GET" action="{{ url('/') }}" class="flex flex-col sm:flex-row gap-4 bg-pink-100 p-4 rounded-xl shadow">
-            <input
-                type="text"
-                name="search"
-                value="{{ request('search') }}"
-                placeholder="{{ __('messages.recipe_list.search_placeholder') }}" {{-- ZMIANA TUTAJ --}}
-                class="flex-1 px-4 py-2 rounded-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-            >
-            <button
-                type="submit"
-                class="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition"
-            >
-                {{ __('messages.recipe_list.search_button') }} {{-- ZMIANA TUTAJ --}}
-            </button>
-
-            {{-- Nowa sekcja filtrowania po tagach --}}
-            <div class="mb-3">
-                <label class="form-label">Filtruj po tagach:</label>
-                <div class="d-flex flex-wrap gap-2">
-                    @foreach($allTags as $tag)
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="tags[]"
-                                   value="{{ $tag->slug }}" id="tag-{{ $tag->id }}"
-                                   @if(in_array($tag->slug, $selectedTags)) checked @endif>
-                            <label class="form-check-label" for="tag-{{ $tag->id }}">
-                                {{ $tag->nazwa }}
-                            </label>
-                        </div>
-                    @endforeach
-                </div>
+    @php
+        $tagColors = [
+            // Niebieski
+            [
+                'default' => 'bg-blue-100 text-blue-800 hover:bg-blue-200',
+                'checked' => 'peer-checked:bg-blue-600 peer-checked:text-white',
+            ],
+            // Zielony
+            [
+                'default' => 'bg-green-100 text-green-800 hover:bg-green-200',
+                'checked' => 'peer-checked:bg-green-600 peer-checked:text-white',
+            ],
+            // Czerwony
+            [
+                'default' => 'bg-red-100 text-red-800 hover:bg-red-200',
+                'checked' => 'peer-checked:bg-red-600 peer-checked:text-white',
+            ],
+            // Żółty
+            [
+                'default' => 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200',
+                'checked' => 'peer-checked:bg-yellow-600 peer-checked:text-white',
+            ]
+        ];
+    @endphp
+    <form action="{{ route('home') }}" method="GET" class="p-6 bg-pink-800 rounded-lg shadow-lg border-2 border-pink-400 flex flex-col md:flex-row items-start gap-6">
+        <div class="w-full sm:w-1/3">
+            <label for="search" class="block mb-2 text-sm font-medium text-white-700">{{ __('messages.filter.search_label') }}</label>
+            <div class="flex">
+                <input
+                    type="text"
+                    id="search"
+                    name="search"
+                    value="{{ request('search') }}"
+                    placeholder="{{ __('messages.filter.search_placeholder') }}"
+                    class="w-full px-4 py-2 rounded-l-lg border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                >
+                <button
+                    type="submit"
+                    class="px-4 py-2 bg-pink-600 text-white rounded-r-lg hover:bg-pink-700 transition"
+                >
+                    {{ __('messages.filter.search_button') }}
+                </button>
             </div>
+        </div>
 
-            <div class="d-flex justify-content-end gap-2">
-                <a href="{{ Route('home') }}" class="btn btn-secondary">Wyczyść filtry</a>
-                <button type="submit" class="btn btn-primary">Filtruj</button>
+
+        <div class="w-full sm:w-2/3">
+            <label class="block mb-2 text-sm font-medium text-white-700">{{ __('messages.filter.tags_label') }}</label>
+            <div class="flex flex-wrap items-center gap-3">
+                @foreach($allTags as $tag)
+                    @php
+                        $colorClasses = $tagColors[$loop->index % count($tagColors)];
+                    @endphp
+                    <div>
+                        <input class="hidden peer" type="checkbox" name="tags[]" value="{{ $tag->slug }}" id="tag-{{ $tag->id }}"
+                               @if(in_array($tag->slug, $selectedTags ?? [])) checked @endif>
+
+                        <label class="cursor-pointer select-none rounded-full px-4 py-1.5 text-sm font-semibold transition-colors duration-200 {{ $colorClasses['default'] }} {{ $colorClasses['checked'] }}"
+                               for="tag-{{ $tag->id }}">
+                            {{ $tag->nazwa }}
+                        </label>
+                    </div>
+                @endforeach
             </div>
-        </form>
+            <div class="flex justify-end pt-4 mt-4 border-t border-pink-200 gap-3">
+                <a href="{{ url('/') }}" class="px-5 py-2 text-sm font-medium text-white-700 bg-pink-200 border border-transparent rounded-lg hover:bg-pink-300">
+                    {{ __('messages.filter.clear_button') }}
+
+                </a>
+                <button type="submit" class="px-5 py-2 text-sm font-medium text-white bg-pink-600 border border-transparent rounded-lg shadow-sm hover:bg-pink-700">
+                    {{ __('messages.filter.filter_button') }}
+                </button>
+            </div>
+        </div>
+    </form>
     </div>
-
-
     {{-- Siatka z przepisami --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 py-8">
         @foreach($recipes as $recipe)

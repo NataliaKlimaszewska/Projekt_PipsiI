@@ -32,13 +32,11 @@ return [
         'search_button' => 'Buscar',
         'view_recipe_button' => 'Ver Receta',
     ],
-    'profile_page' => [
-<<<<<<< HEAD
+    'profile_page' =>[
         'title' => 'Tu Perfil',
         'username_label' => 'Nombre de usuario:',
         'email_label' => 'Correo electrónico:',
         'favorites_header' => 'Recetas Favoritas',
-=======
         'title' => 'Tu perfil',
         'username_label' => 'Nombre de usuario:',
         'email_label' => 'Correo electrónico:',
@@ -46,7 +44,7 @@ return [
         'bio_label' => 'Biografía:',
         'update_header' => 'Actualizar perfil (temporal)',
         'save_button' => 'Guardar cambios',
->>>>>>> ebbb51f7a695da3958da8a4b7aa9e7e89e742e1a
+
     ],
 
     'buttons' => [
@@ -55,6 +53,14 @@ return [
         'cancel' => 'Cancel',
         'print' => 'Imprimir',
         'back' => 'Volver',
+    ],
+    'filter' => [
+        'search_label'       => 'Buscar una receta:',
+        'search_placeholder' => 'Introduzca un nombre...',
+        'search_button'      => 'Buscar',
+        'tags_label'         => 'Filtrar por etiquetas:',
+        'clear_button'       => 'Limpiar',
+        'filter_button'      => 'Filtrar',
     ],
     'ingredients'=>[
         "apple"=> 'manzana',

@@ -112,7 +112,14 @@ return [
         "Cherry"=>'wiśnia',
         "Rhurbarb"=>'rabarbar'
     ],
-
+    'filter' => [
+        'search_label'       => 'Szukaj przepisu:',
+        'search_placeholder' => 'Wpisz nazwę...',
+        'search_button'      => 'Szukaj',
+        'tags_label'         => 'Filtruj po tagach:',
+        'clear_button'       => 'Wyczyść',
+        'filter_button'      => 'Filtruj',
+    ],
     'homepage' => [
         'welcome_title' => 'Witaj w Sweet Factory!',
         'welcome_subtitle' => 'Odkryj kolekcję naszych ulubionych, sprawdzonych przepisów na ciasta, ciasteczka i desery.',

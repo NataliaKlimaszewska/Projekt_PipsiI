@@ -21,6 +21,14 @@ return [
         'role_backend' => 'Backend',
         'role_frontend' => 'Frontend',
     ],
+        'filter' => [
+            'search_label'       => 'Search for a recipe:',
+            'search_placeholder' => 'Enter a name...',
+            'search_button'      => 'Search',
+            'tags_label'         => 'Filter by tags:',
+            'clear_button'       => 'Clear',
+            'filter_button'      => 'Filter',
+        ],
     'recipe_list' => [
         'search_placeholder' => 'Search for a recipe...',
         'search_button' => 'Search',
