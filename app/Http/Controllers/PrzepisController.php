@@ -9,8 +9,8 @@ class PrzepisController extends Controller
 {
     public function show($id)
     {
-        $recipe = Recipe::findOrFail($id);
-        return view('przepisy.show', compact('recipe'));
+        $recipe = Recipe::with('tags')->findOrFail($id);
+        return view('recipes.show', compact('recipe'));
     }
 }
 

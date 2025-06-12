@@ -10,13 +10,11 @@ use App\Http\Controllers\PrzepisController;
 
 
 Route::middleware('web')->group(function () {
-    Route::get('/', [\App\Http\Controllers\Controller::class, 'home']);
+    Route::get('/', [App\Http\Controllers\Controller::class, 'index'])->name('home');
     Route::get('/about', [\App\Http\Controllers\Controller::class, 'about']);
-    Route::get('/ideas', [\App\Http\Controllers\Ingredients::class, 'newIdeas']);
-    Route::get('/createRecipe', [\App\Http\Controllers\Ingredients::class, 'addNewRecipe']);
     Route::get('/quiz', [\App\Http\Controllers\Controller::class, 'quiz']);
     Route::post('/ingredients/save', [\App\Http\Controllers\Controller::class, 'save'])->name('save.ingredients');
-    Route::get('/przepisy/{id}', [PrzepisController::class, 'show'])->name('przepisy.show');
+    Route::get('/recipes/{id}', [PrzepisController::class, 'show'])->name('recipes.show');
 
     Route::get('/profile/edit', function () {
         return view('profile.edit');
@@ -52,14 +50,6 @@ Route::middleware('web')->group(function () {
     });
 
     Route::post('/logout', [AuthController::class, 'handleLogout'])->name('logout');
-});
-
-Route::get('/test-mail', function () {
-    Mail::raw('To jest testowa wiadomość', function ($message) {
-        $message->to('hello@example.com')->subject('Test Mail');
-    });
-
-    return 'Wysłano!';
 });
 
 Route::get('/language/{locale}', function ($locale) {

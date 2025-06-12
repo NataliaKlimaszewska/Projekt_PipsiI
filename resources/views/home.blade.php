@@ -70,6 +70,28 @@
             >
                 {{ __('messages.recipe_list.search_button') }} {{-- ZMIANA TUTAJ --}}
             </button>
+
+            {{-- Nowa sekcja filtrowania po tagach --}}
+            <div class="mb-3">
+                <label class="form-label">Filtruj po tagach:</label>
+                <div class="d-flex flex-wrap gap-2">
+                    @foreach($allTags as $tag)
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tags[]"
+                                   value="{{ $tag->slug }}" id="tag-{{ $tag->id }}"
+                                   @if(in_array($tag->slug, $selectedTags)) checked @endif>
+                            <label class="form-check-label" for="tag-{{ $tag->id }}">
+                                {{ $tag->nazwa }}
+                            </label>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+                <a href="{{ Route('home') }}" class="btn btn-secondary">Wyczyść filtry</a>
+                <button type="submit" class="btn btn-primary">Filtruj</button>
+            </div>
         </form>
     </div>
 
@@ -83,7 +105,7 @@
                 <p class="text-sm text-pink-900 flex-grow">
                     {{ Str::limit($recipe->opis, 120) }}
                 </p>
-                <a href="{{ route('przepisy.show', $recipe->id) }}" class="mt-4 inline-block px-4 py-2 bg-pink-600 text-white rounded-md text-center hover:bg-pink-700 transition">
+                <a href="{{ route('recipes.show', $recipe->id) }}" class="mt-4 inline-block px-4 py-2 bg-pink-600 text-white rounded-md text-center hover:bg-pink-700 transition">
                     {{ __('messages.recipe_list.view_recipe_button') }} {{-- ZMIANA TUTAJ --}}
                 </a>
             </div>

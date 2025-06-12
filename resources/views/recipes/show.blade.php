@@ -61,6 +61,16 @@
                         {{ __('messages.recipe_page.instructions') }}
                     </h2>
                     <p class="whitespace-pre-line text-gray-700 text-base leading-relaxed">{{ $recipe->sposob_wykonania }}</p>
+                    @if($recipe->tags->isNotEmpty())
+                        <div class="tagi-section mt-4">
+                            <strong>Tagi:</strong>
+                            @foreach($recipe->tags as $tag)
+                                <a href="{{ Route('home', ['tags[]' => $tag->slug]) }}" class="tag-link">
+                                    {{ $tag->nazwa }}
+                                </a>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

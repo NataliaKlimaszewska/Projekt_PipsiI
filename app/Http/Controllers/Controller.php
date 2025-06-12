@@ -7,12 +7,13 @@ use App\Http\Controllers\IngredientsController;
 
 use App\Models\Ingredients;
 use App\Models\Recipe;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    public function home(Request $request)
+    public function index(Request $request)
     {
         $query = Recipe::with('ingredients');
 
@@ -23,7 +24,17 @@ class Controller extends BaseController
             });
         }
 
+        if ($request->filled('tags') && is_array($request->tags)) {
+            $selectedTags = $request->tags; // To jest tablica slugów tagów, np. ['sernik', 'szybkie']
+
+            // Używamy whereHas, aby znaleźć przepisy, które mają WSZYSTKIE wybrane tagi.
+            $query->whereHas('tags', function ($q) use ($selectedTags) {
+                $q->whereIn('slug', $selectedTags); // Musi mieć tag, którego slug jest w naszej tablicy
+            }, '=', count($selectedTags)); // I liczba pasujących tagów musi być równa liczbie wybranych tagów
+        }
+
         $recipes = $query->get();
+        $allTags = Tag::all();
         $products = Ingredients::all();
         $ingredientsGroups = (new IngredientsController())->getGroups();
 
@@ -31,6 +42,8 @@ class Controller extends BaseController
             'recipes' => $recipes,
             'products' => $products,
             'ingredientsGroups' => $ingredientsGroups,
+            'allTags' => $allTags,
+            'selectedTags' => $request->tags ?? [],
         ]);
     }
 
